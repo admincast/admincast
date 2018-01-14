@@ -1,0 +1,31 @@
+// Contextual backgrounds
+
+@mixin bg-variant($selector, $color) {
+    .bg-#{$selector}-800 {
+        background-color: mix(black, $color, 28%) !important;
+    }
+    .bg-#{$selector}-700 {
+        background-color: mix(black, $color, 18%) !important;
+    }
+    .bg-#{$selector}-600 {
+        background-color: mix(black, $color, 8%) !important;
+    }
+    .bg-#{$selector} {
+        background-color: $color !important;
+    }
+    .bg-#{$selector}-400 {
+        background-color: mix(white, $color, 15%) !important;
+    }
+    .bg-#{$selector}-300 {
+        background-color: mix(white, $color, 30%) !important;
+    }
+    .bg-#{$selector}-200 {
+        background-color: mix(white, $color, 50%) !important;
+    }
+    .bg-#{$selector}-100 {
+        background-color: mix(white, $color, 70%) !important;
+    }
+    .bg-#{$selector}-50 {
+        background-color: mix(white, $color, 88%) !important;
+    }
+}

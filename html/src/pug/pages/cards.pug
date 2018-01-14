@@ -1,0 +1,275 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Cards'
+  - var pageUrl = 'cards.html'
+  - var page_heading = 'Cards'
+  - var path = ['Cards']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='Cards', tools={'collapse':1})
+        .card(style='width:280px')
+            +img('blog/storm.jpg')(class='card-img-top')
+            .card-body
+                h4.card-title Card title
+                .text-muted.card-subtitle subtitle
+                p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content.
+                button.btn.btn-default.btn-sm
+                    i.fa.fa-plus
+                    |  Add
+        br
+        .card(style='width:280px')
+            +img('blog/macarons.jpg')(class='card-img-top')
+            .card-body
+                p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content.
+                a.link-blue
+                    i.fa.fa-comments
+                    |  Comments
+        br
+        .card(style='width:280px')
+            .card-body
+                h4.card-title Card title
+                .text-muted.card-subtitle 2 days ago
+                p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content.
+            +img('blog/horse.jpg')(class='card-img-top')
+        br
+        h5.m-t-20.m-b-20 Without image
+        .card(style='width:280px')
+            .card-body
+                h4.card-title Card title
+                .text-muted.card-subtitle subtitle
+                p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content.
+                a.link-blue.text-muted
+                    i.fa.fa-heart
+                    |  Like
+        br
+        .card(style='width:280px')
+            .card-body
+                h4.card-title Card title
+                .text-muted.card-subtitle subtitle
+                p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content.
+                .pull-right
+                    span.text-muted Frank
+                    +img('users/u3.jpg')(class='img-circle m-l-10' style='width:28px')
+        br
+    .col-md-6
+      +panel(title='Cards', tools={'collapse':1})
+        h5.m-b-20 Header & Footer
+        .card(style='width:320px')
+            .card-header
+                +img('users/u2.jpg')(class='img-circle m-r-10 pull-left' style='width:28px')
+                h6.m-0 Becky Brooks
+                small.text-muted 16 January 2014
+            .card-body
+                p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content.
+                div.d-flex.justify-content-between.align-items-center
+                    a.link-blue
+                        i.fa.fa-heart
+                        |  Like
+                    button.btn.btn-default.btn-sm
+                        | Share 
+                        i.fa.fa-share.pull-rightx
+        br
+        br
+        .card(style='width:300px')
+            +img('blog/candles.jpg')(class='card-img-top')
+            .card-body
+                h4.card-title Jane Smith
+                .text-muted.card-subtitle Director
+                div
+                    | Some quick example text to build on the card title and make up the bulk of the card's content.
+            .card-footer
+                a.text-info
+                    i.fa.fa-star
+                    |  Follow
+                span.pull-right.text-muted.font-13 Joined in 12.01
+        h5.m-t-20.m-b-20 Image overlay
+        .card(style='width:260px')
+            +img('blog/storm.jpg')(class='card-img')
+            .card-img-overlay.text-white
+                h4.card-title Card title
+                p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content.
+                button.btn.btn-default.btn-sm Read
+        br
+        h5.m-t-20.m-b-20 With List
+        .card(style='width:300px')
+            +img('blog/macarons.jpg')(class='card-img-top')
+            .card-body
+                h4.card-title Jane Smith
+                div Some quick example text.
+            ul.list-group.list-group-divider.no-margin
+                li.list-group-item(style='border-top-color:#e1eaec')
+                    | Sales 
+                    span.badge.badge-danger.badge-circle.float-right 4
+                li.list-group-item
+                    | Photos 
+                    span.badge.badge-info.badge-circle.float-right 7
+                li.list-group-item
+                    | Friends 
+                    span.badge.badge-warning.badge-circle.float-right 24
+            .card-footer
+                a.text-info
+                    i.fa.fa-star
+                    |  Follow
+                span.pull-right.text-muted.font-13 Joined in 12.01
+
+  div
+    +panel(title='Card groups', tools={'collapse':1})
+      .row
+        .col-md-9
+          .card-group
+            .card
+                +img('image.png')(class='card-img-top')
+                .card-body
+                    h5.card-title Lola
+                    .text-muted.card-subtitle Director
+                    div
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                .card-footer
+                    a.text-info
+                        i.fa.fa-heart
+                        |  Like
+            .card
+                +img('image.png')(class='card-img-top')
+                .card-body
+                    h5.card-title Jack
+                    .text-muted.card-subtitle SEO
+                    div
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                .card-footer
+                    a.text-info
+                        i.fa.fa-heart
+                        |  Like
+            .card
+                +img('image.png')(class='card-img-top')
+                .card-body
+                    h5.card-title Jane
+                    .text-muted.card-subtitle Designer
+                    div
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                .card-footer
+                    a.text-info
+                        i.fa.fa-heart
+                        |  Like
+      br
+      h4.m-b-20.font-strong Card deck
+      .row
+        .col-md-9
+          .card-deck
+            .card
+                +img('image.png')(class='card-img-top')
+                .card-body
+                    h5.card-title Lola
+                    .text-muted.card-subtitle Director
+                    div
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                .card-footer
+                    a.text-info
+                        i.fa.fa-star
+                        |  Follow
+                    span.pull-right.text-muted.font-13 Jan 2
+            .card
+                +img('image.png')(class='card-img-top')
+                .card-body
+                    h5.card-title Jack
+                    .text-muted.card-subtitle SEO
+                    div
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                .card-footer
+                    a.text-info
+                        i.fa.fa-star
+                        |  Follow
+                    span.pull-right.text-muted.font-13 Dec 4
+            .card
+                +img('image.png')(class='card-img-top')
+                .card-body
+                    h4.card-title Jane
+                    .text-muted.card-subtitle Designer
+                    div
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                .card-footer
+                    a.text-info
+                        i.fa.fa-star
+                        |  Follow
+                    span.pull-right.text-muted.font-13 Jan 7
+      br
+      h4.m-b-20.font-strong Card columns
+      .row
+        .col-md-9
+          .card-columns
+            .card
+                +img('blog/storm.jpg')(class='card-img-top')
+                .card-body
+                    h4.card-title Lola
+                    .text-muted.card-subtitle Director
+                    div
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                .card-footer
+                    a.text-info
+                        i.fa.fa-heart
+                        |  Like
+            .card
+                +img('blog/seascape.jpg')(class='card-img-top')
+                .card-body
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                    a.link-blue
+                        i.fa.fa-comments
+                        |  Comments
+            .card
+                .card-body
+                    h5.card-title Card title
+                    .text-muted.card-subtitle subtitle
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                    a.link-blue
+                        i.fa.fa-heart
+                        |  Like
+            .card
+                .card-body
+                    h5.card-title Card title
+                    .text-muted.card-subtitle 2 days ago
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                +img('blog/horse.jpg')(class='card-img-top')
+            .card
+                +img('blog/macarons.jpg')(class='card-img-top')
+                .card-body
+                    h4.card-title Jane
+                    div
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                .card-footer
+                    a.text-info
+                        i.fa.fa-heart
+                        |  Like
+            .card
+                +img('blog/storm.jpg')(class='card-img-top')
+                .card-img-overlay.text-white
+                    h4.card-title Card title
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                    button.btn.btn-default.btn-sm Read
+            .card
+                .card-header
+                    +img('users/u1.jpg')(class='pull-left img-circle m-r-10' style='width:32px')
+                    h6.m-0 Lolla Hatson
+                    small.text-muted 16 January 2014
+                .card-body
+                    p.card-text
+                        | Some quick example text to build on the card title and make up the bulk of the card's content.
+                    div.d-flex.justify-content-between.align-items-center
+                        a.link-blue
+                            i.fa.fa-heart
+                            |  Like
+                        button.btn.btn-default.btn-sm
+                            | Share 
+                            i.fa.fa-share

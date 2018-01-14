@@ -1,0 +1,20 @@
+
+.inbox-list li a {
+	color: inherit;
+}
+.inbox-list li a i {margin-right:5px}
+.mailbox-header, .mailbox-body {padding: 15px}
+.inbox-title {white-space: normal; margin: 8px 0; font-weight: 600;}
+.mail-search {width:300px}
+.inbox-toolbar {white-space: nowrap}
+.table-inbox tr.unread {font-weight: 600;}
+.table-inbox tr > td:first-child {padding-left:15px}
+
+.mail-attachments .card{
+    width: 220px;
+	margin-bottom: 20px;
+    margin-right: 20px;
+}
+@media (max-width: 992px) {
+    .mail-search {width:100%}
+}

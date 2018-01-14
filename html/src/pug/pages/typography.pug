@@ -1,0 +1,64 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Typography'
+  - var pageUrl = 'typography.html'
+  - var page_heading = 'Typography'
+  - var path = ['Typography']
+
+block content
+  .row
+    .col-md-4
+      +panel(title='Bold Headings')
+        h1.no-margin h1 Heading
+        br
+        h2.no-margin h2 Heading
+        br
+        h3.no-margin h3 Heading
+        br
+        h4.no-margin h4 Heading
+        br
+        h5.no-margin h5 Heading
+        br
+        h6.no-margin h6. Heading
+        br
+    .col-md-4
+      +panel(title='Bold Headings')
+        h2.font-light Font light
+        h2 Font Regular
+        h2.font-strong Font strong
+        h2.font-bold Font bold
+        h2.font-extra-bold Font Extra bold
+    .col-md-4
+      +panel(title='Simple text')
+        p.lead This is an example of lead body
+        p
+            | This is an example of standard 
+            abbr(title='It is abbreviation') paragraph
+            |  text. This is a 
+            a(href='#') link
+            | . Font size 
+            code 14px
+            | .
+        p
+            small This is an example of small, fine print text.
+        p
+            strong strong text, 
+            b bold text.
+        p
+            em
+                | This is an example of 
+                mark emphasized
+                | , italic text.
+        p.text-left Left aligned text.
+        p.text-center Center aligned text.
+        p.text-right Right aligned text.
+  .row
+    .col-md-4
+      +panel(title='Text Emphasis Colors')
+        p.text-muted Simple example of muted text.
+        p.text-primary Simple example of primary text.
+        p.text-success Simple example of success text.
+        p.text-info Simple example of info text.
+        p.text-warning Simple example of warning text.
+        p.text-danger Simple example of danger text.

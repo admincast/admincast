@@ -1,0 +1,78 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Alerts & Tooltips'
+  - var pageUrl = 'alerts_tooltips.html'
+  - var page_heading = 'Alerts & Tooltips'
+  - var path = ['Alerts & Tooltips']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='Alerts', tools={'collapse':1, 'expend':1})
+        .alert.alert-success
+            strong Success!
+            |  You successfully read this important alert message. 
+            a.alert-link(href='javascript:;') Alert link
+        .alert.alert-info
+            strong Info!
+            |  This alert needs your attention, but it's not super important. 
+            a.alert-link(href='javascript:;') Alert link
+        .alert.alert-warning
+            strong Warning!
+            |  Better check yourself, you're not looking too good. 
+            a.alert-link(href='javascript:;') Alert link
+        .alert.alert-danger
+            strong Danger!
+            |  Change a few things up and try submitting again. 
+            a.alert-link(href='javascript:;') Alert link
+        h5.m-t-10.m-b-10 Dismissing
+        .alert.alert-success.alert-dismissable.fade.show
+            button.close(data-dismiss='alert', aria-label='Close') ×
+            strong Success!
+            |  You successfully read this important alert message.
+        .alert.alert-warning.alert-dismissable.fade.show
+            button.close(data-dismiss='alert', aria-label='Close') ×
+            strong Warning!
+            |  Better check yourself, you're not looking too good.
+        h5.m-t-10.m-b-10 Bordered
+        .alert.alert-danger.alert-bordered
+            strong WOW!
+            |  Change a few things up and try submitting again.
+        .alert.alert-success.alert-bordered
+            strong WOW!
+            |  Change a few things up and try submitting again.
+        .alert.alert-warning.alert-bordered-right
+            strong WOW!
+            |  Change a few things up and try submitting again.
+        h5.m-t-10.m-b-10 Additional content
+        .alert.alert-info.alert-dismissable.fade.show
+            button.close(data-dismiss='alert', aria-label='Close')
+                span(aria-hidden='true') ×
+            h4 Hello!
+            p
+                | Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+            p
+                button.btn.btn-success i am agree
+                button.btn.btn-warning Cancel
+    .col-md-6
+      +panel(title='Tooltips & Popovers', tools={'collapse':1, 'menu':1})
+        button.btn.btn-default.m-r-5.m-b-5(data-toggle='tooltip', data-placement='left', title='Tooltip on left') Left
+        button.btn.btn-default.m-r-5.m-b-5(data-toggle='tooltip', data-placement='top', title='Tooltip on top') Top
+        button.btn.btn-default.m-r-5.m-b-5(data-toggle='tooltip', data-placement='bottom', title='Tooltip on bottom') Bottom
+        button.btn.btn-default.m-r-5.m-b-5(data-toggle='tooltip', data-placement='right', title='Tooltip on right') Right
+        button.btn.btn-default.m-b-5(data-toggle='tooltip', data-html='true', title='<em>Tooltip</em> <u>with</u> <b>HTML</b>') With HTML
+        br
+        br
+        button.btn.btn-default.m-r-5.m-b-5(data-toggle='tooltip', data-placement='top', data-trigger='click', title='Clickable Tooltip') Click to tooltip
+        button.btn.btn-default.m-b-5(data-toggle='tooltip', data-placement='top', data-html='true', title="<img src='../assets/img/demo/users/u1.jpg' width='35px'>") With Icons
+        h5.m-t-10.m-b-10 Popovers
+        button.btn.btn-info.m-r-5.m-b-5(data-container='body', data-toggle='popover', data-trigger='hover', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Hoverable Popover
+        button.btn.btn-info.m-r-5.m-b-5(data-container='body', data-toggle='popover', data-trigger='focus', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Dismissable Popover
+        button.btn.btn-info.m-b-5(data-container='body', data-toggle='popover', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Clickable Popover
+        br
+        br
+        button.btn.btn-info.m-r-5.m-b-5(data-container='body', data-toggle='popover', data-trigger='hover', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Top
+        button.btn.btn-info.m-r-5.m-b-5(data-container='body', data-toggle='popover', data-trigger='hover', data-placement='right', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Right
+        button.btn.btn-info.m-r-5.m-b-5(data-container='body', data-toggle='popover', data-trigger='hover', data-placement='bottom', data-content='Vivamussagittis lacus vel augue laoreet rutrum faucibus.') Bottom
+        button.btn.btn-info.m-b-5(data-container='body', data-toggle='popover', data-trigger='hover', data-placement='left', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Left

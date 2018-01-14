@@ -1,0 +1,73 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Form Validation'
+  - var pageUrl = 'form_validation.html'
+  - var page_heading = 'Form Validation'
+  - var path = ['Form Validation']
+
+block plugins
+  +script('jquery-validation/dist/jquery.validate.min.js', 'plugin')
+
+block content
+    .alert.bg-white
+      h4 jQuery Validation Plugin
+      p
+        | This jQuery plugin makes simple clientside form validation easy, whilst still offering plenty of customization options. For more info please check out
+      p
+        a.btn.btn-success(href='https://jqueryvalidation.org/', target='_blank') Official Site
+    
+    +panel(title='Basic Validation', tools={'collapse':1})
+      form#form-sample-1.form-horizontal(method='post', novalidate='novalidate')
+        .form-group.row
+            label.col-sm-2.col-form-label Name
+            .col-sm-10
+                input.form-control(type='text', name='name')
+        .form-group.row
+            label.col-sm-2.col-form-label Email
+            .col-sm-10
+                input.form-control(type='text', name='email')
+        .form-group.row
+            label.col-sm-2.col-form-label Website
+            .col-sm-10
+                input.form-control(type='text', name='url')
+        .form-group.row
+            label.col-sm-2.col-form-label Number
+            .col-sm-10
+                input.form-control(type='text', name='number')
+        .form-group.row
+            label.col-sm-2.col-form-label Min length
+            .col-sm-10
+                input.form-control(type='text', name='min')
+        .form-group.row
+            label.col-sm-2.col-form-label Max length
+            .col-sm-10
+                input.form-control(type='text', name='max')
+        .form-group.row
+            label.col-sm-2.col-form-label EqualTo (confirm)
+            .col-sm-10
+                input#password.form-control(type='text', name='password', placeholder='password')
+        .form-group.row
+            .col-sm-10.ml-sm-auto
+                input.form-control(type='text', name='password_confirmation', placeholder='confirm password')
+        .form-group.row
+            .col-sm-10.ml-sm-auto
+                button.btn.btn-info(type='submit') Submit
+
+block scripts
+  script(type='text/javascript').
+    $("#form-sample-1").validate({
+        rules:{
+            name:{minlength:2,required:!0},
+            email:{required:!0,email:!0},
+            url:{required:!0,url:!0},
+            number:{required:!0,number:!0},
+            min:{required:!0,minlength:3},
+            max:{required:!0,maxlength:4},
+            password:{required:!0},
+            password_confirmation:{required:!0,equalTo:"#password"}
+        },
+        errorClass:"help-block error",
+        highlight:function(e){$(e).closest(".form-group.row").addClass("has-error")},
+        unhighlight:function(e){$(e).closest(".form-group.row").removeClass("has-error")},
+    });

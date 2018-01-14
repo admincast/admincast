@@ -1,0 +1,38 @@
+.adminca-banner {
+  display: block;
+  padding:15px;
+  background-image:linear-gradient(135deg,#2cc4cb,#18c5a9);
+  position: relative;
+  max-width: 1260px;
+}
+.wrap-1, .wrap-2 {display: flex}
+.adminca-banner-ribbon {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  padding: 4px 10px;
+  background-image: linear-gradient(135deg,rgba(0,0,0,.1),rgba(0,0,0,.5));
+  color: #f39c12!important;
+  font-size: 1.75rem;
+}
+.adminca-banner-b {
+  font-size: 16px;
+  padding: 5px 10px;
+  background: #fff;
+  box-shadow: 0 0 15px 5px rgba(0,0,0,.2);
+  width: 170px;
+  border-radius: 50px;
+  color: #333;
+}
+.dev-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+@media (max-width: 1230px) {
+  .adminca-banner {display:inline-block}
+  .wrap-1 {display: block}
+  .wrap-2 {margin-bottom: 20px}
+  .dev-img {position: static}
+  .wrap-3 {justify-content: start !important}
+}

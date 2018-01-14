@@ -1,0 +1,96 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "bootstrap-timepicker",
+        "scope": null,
+        "escapedName": "bootstrap-timepicker",
+        "name": "bootstrap-timepicker",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "D:\\OSPanel\\domains\\temp-free\\tools\\gulp"
+    ]
+  ],
+  "_from": "bootstrap-timepicker@latest",
+  "_id": "bootstrap-timepicker@0.5.2",
+  "_inCache": true,
+  "_location": "/bootstrap-timepicker",
+  "_nodeVersion": "5.3.0",
+  "_npmUser": {
+    "name": "mrhota",
+    "email": "aaron.j.gardner@gmail.com"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "bootstrap-timepicker",
+    "scope": null,
+    "escapedName": "bootstrap-timepicker",
+    "name": "bootstrap-timepicker",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/bootstrap-timepicker/-/bootstrap-timepicker-0.5.2.tgz",
+  "_shasum": "10ed9f2a2f0b8ccaefcde0fcf6a0738b919a3835",
+  "_shrinkwrap": null,
+  "_spec": "bootstrap-timepicker",
+  "_where": "D:\\OSPanel\\domains\\temp-free\\tools\\gulp",
+  "author": {
+    "name": "Joris de Wit",
+    "email": "joris.w.dewit@gmail.com",
+    "url": "http://jorisdewit.ca"
+  },
+  "bugs": {
+    "url": "https://github.com/jdewit/bootstrap-timepicker/issues"
+  },
+  "dependencies": {},
+  "description": "Timepicker widget for Twitter Bootstrap",
+  "devDependencies": {
+    "bower": "latest",
+    "grunt": "~0.4.1",
+    "grunt-bump": "0.0.11",
+    "grunt-cli": "~0.1",
+    "grunt-contrib-jasmine": "~0.4.2",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-less": "~0.5.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.3",
+    "grunt-shell": "~0.2.2"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "10ed9f2a2f0b8ccaefcde0fcf6a0738b919a3835",
+    "tarball": "https://registry.npmjs.org/bootstrap-timepicker/-/bootstrap-timepicker-0.5.2.tgz"
+  },
+  "files": [
+    "js",
+    "css"
+  ],
+  "gitHead": "c31df7a9170e7e63617890a9ed282eeaf6bc2cb1",
+  "homepage": "http://jdewit.github.com/bootstrap-timepicker",
+  "license": "MIT",
+  "main": "js/bootstrap-timepicker.js",
+  "maintainers": [
+    {
+      "name": "mrhota",
+      "email": "aaron.j.gardner@gmail.com"
+    }
+  ],
+  "name": "bootstrap-timepicker",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jdewit/bootstrap-timepicker.git"
+  },
+  "scripts": {
+    "test": "bower install; grunt test;"
+  },
+  "version": "0.5.2"
+}

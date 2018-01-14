@@ -1,0 +1,127 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Colors'
+  - var pageUrl = 'colors.html'
+  - var page_heading = 'Colors'
+  - var path = ['Colors']
+
+block content
+  +panel(title='Main Colors list', tools={'collapse':1})
+      .row
+        .col-sm-2
+            .color-box
+                .color-view.bg-primary
+                .color-name
+                    | Primary 
+                    small #3498db
+        .col-sm-2
+            .color-box
+                .color-view.bg-info
+                .color-name
+                    | Info 
+                    small #23B7E5
+        .col-sm-2
+            .color-box
+                .color-view.bg-success
+                .color-name
+                    | Success 
+                    small #2ecc71
+        .col-sm-2
+            .color-box
+                .color-view.bg-warning
+                .color-name
+                    | Warning 
+                    small #F39C12
+        .col-sm-2
+            .color-box
+                .color-view.bg-danger
+                .color-name
+                    | Danger 
+                    small #e74c3c
+        .col-sm-2
+            .color-box
+                .color-view.bg-silver
+                .color-name
+                    | Silver 
+                    small #bdc3c7
+      .row
+        .col-sm-2
+            .color-box
+                .color-view.bg-ebony
+                .color-name
+                    | Navy 
+                    small #7f8c8d
+        .col-sm-2
+            .color-box
+                .color-view.bg-purple
+                .color-name
+                    | Purple
+                    small #7E57C2
+        .col-sm-2
+            .color-box
+                .color-view.bg-teal
+                .color-name
+                    | Teal
+                    small #1abc9c
+        .col-sm-2
+            .color-box
+                .color-view.bg-yellow
+                .color-name
+                    | Yellow 
+                    small #f1c40f
+        .col-sm-2
+            .color-box
+                .color-view.bg-pink
+                .color-name
+                    | Pink
+                    small #E91E63
+        .col-sm-2
+            .color-box
+                .color-view.bg-grey
+                .color-name
+                    | Grey
+                    small #7f8c8d
+
+  style.
+    .colors-boxes .color-box{
+      margin-bottom:20px;
+      border: 1px solid #eee;
+    }
+    .color-box .color-view {
+      position: relative;
+      padding: 35px 10px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .color-box .color-view span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 6px;
+        background-color: rgba(0,0,0,.2);
+        font-size: 12px;
+        color: #fff;
+    }
+    .color-box .color-name {
+        padding: 7px;
+        text-align: center;
+        font-weight: 600;
+    }
+    .color-box .color-name small {display:block;font-weight:400;}
+    .colors-tabs {padding-top: 15px; margin:0; border:0; display:block}
+    .colors-tabs span {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin-left: 15px;
+      cursor: pointer;
+      border: 0 !important;
+      padding: 0;
+    }
+    .color-palette {
+        padding: 10px 15px;
+        color: #fff;
+    }

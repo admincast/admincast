@@ -1,0 +1,95 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Text Editors'
+  - var pageUrl = 'text_editors.html'
+  - var page_heading = 'Text Editors'
+  - var path = ['Text Editors']
+
+block plugins-styles
+  +link('summernote/dist/summernote.css','plugin')
+  +link('bootstrap-markdown/css/bootstrap-markdown.min.css','plugin')
+
+block plugins
+  +script('summernote/dist/summernote.min.js', 'plugin')
+  +script('bootstrap-markdown/js/bootstrap-markdown.js', 'plugin')
+
+block content
+    +panel('Summernote Editor <a class="btn btn-xs btn-default m-l-5" href="http://summernote.org/" target="_blank">Official site</a>')
+      #summernote(data-plugin='summernote', data-air-mode='true')
+        h2 WYSIWYG Editor
+        |  Lorem ipsum dolor sit amet, consectetur adipiscing
+        |                         elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in
+        |                         quis tellus. Duis in urna bibendum turpis pretium fringilla. Aenean
+        |                         neque velit, porta eget mattis ac, imperdiet quis nisi. Donec non
+        |                         dui et tortor vulputate luctus. Praesent consequat rhoncus velit,
+        |                         ut molestie arcu venenatis sodales.
+        h4 Lacinia
+        ul
+            li Suspendisse tincidunt urna ut velit ullamcorper fermentum.
+            li Nullam mattis sodales lacus, in gravida sem auctor at.
+            li Praesent non lacinia mi.
+            li Mauris a ante neque.
+            li Aenean ut magna lobortis nunc feugiat sagittis.
+        h4 Pellentesque Adipiscing
+        |  Maecenas quis ante ante. Nunc adipiscing
+        |                         rhoncus rutrum. Pellentesque adipiscing urna mi, ut tempus lacus
+        |                         ultrices ac. Pellentesque sodales, libero et mollis interdum, dui
+        |                         odio vestibulum dolor, eu pellentesque nisl nibh quis nunc. Sed
+        |                         porttitor leo adipiscing venenatis vehicula. Aenean quis viverra
+        |                         enim. Praesent porttitor ut ipsum id ornare.
+    +panel('Summernote Air-Mode')
+      #summernote_air(data-plugin='summernote', data-air-mode='true')
+        h2 Air-Mode
+        p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing
+            | elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in
+            | quis tellus. Duis in urna bibendum turpis pretium fringilla. Aenean
+            | neque velit
+        ul
+            li Suspendisse tincidunt urna ut velit ullamcorper fermentum.
+            li Nullam mattis sodales lacus, in gravida sem auctor at.
+            li Aenean ut magna lobortis nunc feugiat sagittis.
+    .row
+      .col-md-6
+        +panel('Markdown <a class="btn btn-xs btn-default m-l-5" href="https://github.com/toopay/bootstrap-markdown" target="_blank">Official site</a>')
+            p
+                | Switch regular textarea within your form into Bootstrap-Markdown editor seamlessly by adding 
+                code data-provide="markdown"
+                |  attribute
+            textarea(name='content', data-provide='markdown', data-iconlibrary='fa' rows='10')
+                | h1 header
+                | ============
+                | Paragraphs are separated by a blank line.
+                | 2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
+                | look like:
+                | * this one
+                | * that one
+                | * the other one
+      .col-md-6
+        +panel('Markdown Inline Editing')
+            p
+                | Inline editing with Bootstrap-Markdown is done by adding 
+                code data-provide="markdown-editable"
+                |  attribute
+            div(data-provide='markdown-editable', data-iconlibrary='fa')
+                h3 Heading is here
+                p
+                    | Lorem ipsum dolor,
+                    strong
+                        b consectetur adipisicing elit
+                    | consectetur adipisicing
+                    |                           elit, sed domagna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    u Exercitation
+                    |                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                h4 Title
+                p
+                    | laboris nisi ut aliquip ex ea commodo consequat 
+                    a(href='http://www.github.com') link is here
+
+block scripts
+  script(type='text/javascript').
+    $(function(){
+      $('#summernote').summernote();
+      $('#summernote_air').summernote({airMode:true});
+    });

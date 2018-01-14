@@ -1,0 +1,18 @@
+// Summernote text editor
+
+.note-editor.note-frame {
+    border-radius: 0;
+    border-color: #ddd;
+}
+.note-toolbar {background-color: #f2f2f2 !important;}
+.note-btn, .note-btn:hover, .open .note-btn.dropdown-toggle {
+    background-color:#fff; 
+}
+
+.note-color .dropdown-menu > li > .btn-group {
+    display: table-cell!important; 
+    padding: 5px
+}
+.note-popover.popover {
+    display: none;
+}

@@ -1,0 +1,120 @@
+// BEGIN THEME CONFIG PANEL
+.theme-config
+    .theme-config-toggle
+        i.fa.fa-cog.theme-config-show
+        i.ti-close.theme-config-close
+    .theme-config-box
+        .text-center.font-18.m-b-20 SETTINGS
+        .font-strong LAYOUT OPTIONS
+        .check-list.m-b-20.m-t-10
+            label.ui-checkbox.ui-checkbox-gray
+                input#_fixedNavbar(type='checkbox' checked)
+                span.input-span
+                | Fixed navbar
+            label.ui-checkbox.ui-checkbox-gray
+                input#_fixedlayout(type='checkbox')
+                span.input-span
+                | Fixed layout
+            label.ui-checkbox.ui-checkbox-gray
+                input.js-sidebar-toggler(type='checkbox')
+                span.input-span
+                | Collapse sidebar
+        .font-strong LAYOUT STYLE
+        .m-t-10
+            label.ui-radio.ui-radio-gray.m-r-10
+                input(type='radio', name='layout-style', value='', checked='')
+                span.input-span
+                | Fluid
+            label.ui-radio.ui-radio-gray
+                input(type='radio', name='layout-style', value='1')
+                span.input-span
+                | Boxed
+        .m-t-10.m-b-10.font-strong THEME COLORS
+        .d-flex.m-b-20
+            .color-skin-box(data-toggle='tooltip', data-original-title='Default')
+                label
+                    input(type='radio', name='setting-theme', value='default', checked='')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-white
+                    .color-small.bg-ebony
+            .color-skin-box(data-toggle='tooltip', data-original-title='Blue')
+                label
+                    input(type='radio', name='setting-theme', value='blue')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-blue
+                    .color-small.bg-ebony
+            .color-skin-box(data-toggle='tooltip', data-original-title='Green')
+                label
+                    input(type='radio', name='setting-theme', value='green')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-green
+                    .color-small.bg-ebony
+            .color-skin-box(data-toggle='tooltip', data-original-title='Purple')
+                label
+                    input(type='radio', name='setting-theme', value='purple')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-purple
+                    .color-small.bg-ebony
+            .color-skin-box(data-toggle='tooltip', data-original-title='Orange')
+                label
+                    input(type='radio', name='setting-theme', value='orange')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-orange
+                    .color-small.bg-ebony
+            .color-skin-box(data-toggle='tooltip', data-original-title='Pink')
+                label
+                    input(type='radio', name='setting-theme', value='pink')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-pink
+                    .color-small.bg-ebony
+        .d-flex
+            .color-skin-box(data-toggle='tooltip', data-original-title='White')
+                label
+                    input(type='radio', name='setting-theme', value='white')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color
+                    .color-small.bg-silver-100
+            .color-skin-box(data-toggle='tooltip', data-original-title='Blue light')
+                label
+                    input(type='radio', name='setting-theme', value='blue-light')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-blue
+                    .color-small.bg-silver-100
+            .color-skin-box(data-toggle='tooltip', data-original-title='Green light')
+                label
+                    input(type='radio', name='setting-theme', value='green-light')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-green
+                    .color-small.bg-silver-100
+            .color-skin-box(data-toggle='tooltip', data-original-title='Purple light')
+                label
+                    input(type='radio', name='setting-theme', value='purple-light')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-purple
+                    .color-small.bg-silver-100
+            .color-skin-box(data-toggle='tooltip', data-original-title='Orange light')
+                label
+                    input(type='radio', name='setting-theme', value='orange-light')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-orange
+                    .color-small.bg-silver-100
+            .color-skin-box(data-toggle='tooltip', data-original-title='Pink light')
+                label
+                    input(type='radio', name='setting-theme', value='pink-light')
+                    span.color-check-icon
+                        i.fa.fa-check
+                    .color.bg-pink
+                    .color-small.bg-silver-100
+
+// END THEME CONFIG PANEL

@@ -1,0 +1,20 @@
+li.dropdown.dropdown-user
+  a.nav-link(data-toggle='dropdown').dropdown-toggle.link
+    +img('admin-avatar.png')
+    span
+    | Admin
+    i.fa.fa-angle-down.m-l-5
+  ul.dropdown-menu.dropdown-menu-right
+    a.dropdown-item(href='profile.html')
+        i.fa.fa-user
+        | Profile
+    a.dropdown-item(href='profile.html')
+        i.fa.fa-cog
+        | Settings
+    a.dropdown-item(href='javascript:;')
+        i.fa.fa-support
+        | Support
+    li.dropdown-divider
+    a.dropdown-item(href='login.html')
+        i.fa.fa-power-off
+        | Logout

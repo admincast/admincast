@@ -1,0 +1,30 @@
+// SCROLLER TO TOP
+// ===================
+
+.to-top {
+	position: fixed;
+	right: 3px;
+	bottom: 40px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #FFF;
+	border: 2px solid #687991;
+	border-radius: 50%;
+	z-index: 1001;
+	opacity: 1;
+	cursor: pointer;
+	display: none;
+	i {
+	    font-size:26px;
+	    color:#687991;
+	}
+	&:hover {
+	    background-color: #687991;
+	    i {
+	        display: block;
+	        color: #fff;
+	    }
+	}
+}

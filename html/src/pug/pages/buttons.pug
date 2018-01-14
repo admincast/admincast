@@ -1,0 +1,390 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Buttons'
+  - var pageUrl = 'buttons.html'
+  - var page_heading = 'Buttons'
+  - var path = ['Buttons']
+
+block content
+  .row.btn-list-mrg-5
+    .col-md-6
+      +panel(title='Basic Buttons', tools={'collapse':1})
+        p The most basic buttons without any icons or properties
+        button.btn.btn-default Default
+        button.btn.btn-primary Primary
+        button.btn.btn-success Success
+        button.btn.btn-info Info
+        button.btn.btn-warning Warning
+        button.btn.btn-danger Danger
+        button.btn.btn-link Link
+        h6.m-t-10.m-b-10 Outline buttons
+        button.btn.btn-outline-default Default
+        button.btn.btn-outline-primary Primary
+        button.btn.btn-outline-success Success
+        button.btn.btn-outline-info Info
+        button.btn.btn-outline-warning Warning
+        button.btn.btn-outline-danger Danger
+        h6.m-t-10 Fixed width
+        p Add class <code>.btn-fix</code> for the minimum fixed width
+        button.btn.btn-default.btn-fix Default
+        button.btn.btn-primary.btn-fix Primary
+        button.btn.btn-success.btn-fix Success
+        button.btn.btn-info.btn-fix Info
+      +panel(title='Size Options')
+        p Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.
+        button.btn.btn-primary.btn-lg Large button
+        button.btn.btn-primary Default button
+        button.btn.btn-primary.btn-sm Small button
+        button.btn.btn-primary.btn-xs Mini button
+        p Create block level buttons—those that span the full width of a parent—by adding <code>.btn-block</code> .
+        button.btn.btn-success.btn-block Block button
+        button.btn.btn-outline-info.btn-block Block button
+      +panel(title='Rounded, Circle Buttons')
+        p add <code>.btn-rounded</code> for the rounded buttons
+        button.btn.btn-default.btn-rounded Rounded
+        button.btn.btn-primary.btn-rounded Rounded
+        button.btn.btn-success.btn-rounded Rounded
+        button.btn.btn-info.btn-rounded Rounded
+        p add <code>.btn-circle</code> for the circle buttons
+        button.btn.btn-default.btn-circle.btn-lg: i.fa.fa-link
+        button.btn.btn-primary.btn-circle.btn-lg: i.fa.fa-star
+        button.btn.btn-danger.btn-circle.btn-lg: i.fa.fa-bell
+        button.btn.btn-info.btn-circle.btn-lg: i.fa.fa-heartbeat
+        br
+        button.btn.btn-default.btn-circle: i.fa.fa-history
+        button.btn.btn-warning.btn-circle: i.fa.fa-bullhorn
+        button.btn.btn-success.btn-circle: i.fa.fa-life-ring
+        button.btn.btn-info.btn-circle: i.fa.fa-upload
+        button.btn.btn-primary.btn-circle: i.fa.fa-thumbs-up
+        button.btn.btn-warning.btn-circle: i.fa.fa-eye
+        button.btn.btn-danger.btn-circle: i.fa.fa-times
+        button.btn.btn-success.btn-circle: i.fa.fa-check
+    .col-md-6
+      +panel(title='Button states', tools={'collapse':1})
+        h6.m-b-10 Disabled and Active states
+        button.btn.btn-info.disabled Disabled
+        button.btn.btn-danger(disabled='') Disabled
+        button.btn.btn-default(disabled='') Disabled
+        button.btn.btn-success.active(aria-pressed='true') Active
+        button.btn.btn-default.active(aria-pressed='true') Active
+        h6.m-t-10.m-b-10 Toggle states
+        button.btn.btn-info.m-r-5(data-toggle='button', aria-pressed='false')
+            span.active-hidden
+                i.fa.fa-cloud-upload
+                |  Upload
+            span.active-visible
+                i.fa.fa-check
+                |  Uploaded
+        button.btn.btn-default.btn-circle.m-r-5(data-toggle='button', aria-pressed='false')
+            span.active-hidden
+                i.fa.fa-play
+            span.active-visible
+                i.fa.fa-pause.text-primary
+        button.btn.btn-outline-default.m-r-5(data-toggle='button', aria-pressed='false')
+            span.active-hidden
+                i.fa.fa-thumbs-up
+            span.active-visible
+                i.fa.fa-thumbs-up.text-primary
+        button.btn.btn-outline-success(data-toggle='button', aria-pressed='false') Single toggle
+        h6.m-t-10.m-b-10 Checkbox
+        .btn-group(data-toggle='buttons')
+            label.btn.btn-default
+                | Option 1
+                input(type='checkbox')
+            label.btn.btn-default.active
+                | Option 2
+                input(type='checkbox', checked='')
+            label.btn.btn-default
+                | Option 3
+                input(type='checkbox')
+        br
+        br
+        .btn-group(data-toggle='buttons')
+            label.btn.btn-info
+                | Option 1
+                input(type='checkbox')
+            label.btn.btn-info
+                | Option 2
+                input(type='checkbox')
+            label.btn.btn-info
+                | Option 3
+                input(type='checkbox')
+        h6.m-t-10.m-b-10 Radio
+        .btn-group(data-toggle='buttons')
+            label.btn.btn-success
+                | Option 1
+                input(type='radio')
+            label.btn.btn-success.active
+                | Option 2
+                input(type='radio', checked='')
+            label.btn.btn-success
+                | Option 3
+                input(type='radio')
+        br
+        br
+        .btn-group(data-toggle='buttons')
+            label.btn.btn-outline-info
+                i.fa.fa-check.active-visible
+                |  Male
+                input(type='radio')
+            label.btn.btn-outline-info
+                i.fa.fa-check.active-visible
+                |  Female
+                input(type='radio')
+            label.btn.btn-outline-info
+                i.fa.fa-check.active-visible
+                |  N/A
+                input(type='radio')
+      +panel(title='Grouped Buttons', tools={'collapse':1})
+        .btn-group.m-b-10
+            button.btn.btn-default Left
+            button.btn.btn-default Middle
+            button.btn.btn-default Right
+        br
+        .btn-group.m-b-10
+            button.btn.btn-success
+                i.fa.fa-star
+                |  Stared
+            button.btn.btn-danger
+                i.fa.fa-user
+                |  Users
+            button.btn.btn-info
+                i.fa.fa-cloud-upload
+                |  Upload
+            .btn-group.dropdown
+                button.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+                    | More 
+                    i.fa.fa-angle-down
+                ul.dropdown-menu
+                    li
+                        a(href='javascript:;') Dropdown link
+                    li
+                        a(href='javascript:;') Dropdown link
+        br
+        .btn-group.m-b-10.btn-rounded
+            button.btn.btn-success
+                i.fa.fa-star
+                |  Stared
+            button.btn.btn-danger
+                i.fa.fa-user
+                |  Users
+            button.btn.btn-info
+                i.fa.fa-cloud-upload
+                |  Upload
+        br
+        .btn-group.m-b-10
+            button.btn.btn-default.labeled
+                span.btn-label
+                    i.fa.fa-backward
+                | Back
+            button.btn.btn-default
+                i.fa.fa-play.m-r-5
+                |  Play
+            button.btn.btn-default.labeled.right
+                | Forward
+                span.btn-label
+                    i.fa.fa-forward
+        h6.m-t-10.m-b-10 Button toolbar
+        .btn-toolbar.m-b-10
+            .btn-group
+                button.btn.btn-default 1
+                button.btn.btn-default 2
+                button.btn.btn-default 3
+                button.btn.btn-default 4
+            .btn-group
+                button.btn.btn-default 5
+                button.btn.btn-default 6
+                button.btn.btn-default 7
+            .btn-group
+                button.btn.btn-default 8
+        .btn-toolbar.m-b-10
+            .btn-group
+                button.btn.btn-success 1
+                button.btn.btn-danger 2
+                button.btn.btn-info 3
+                button.btn.btn-default 4
+            .btn-group
+                button.btn.btn-warning 5
+                button.btn.btn-primary 6
+                button.btn.btn-info 7
+            .btn-group
+                button.btn.btn-default 8
+        .btn-toolbar.m-b-10
+            .btn-group.btn-rounded
+                button.btn.btn-success 1
+                button.btn.btn-danger 2
+                button.btn.btn-info 3
+                button.btn.btn-default 4
+            .btn-group.btn-rounded
+                button.btn.btn-warning 5
+                button.btn.btn-primary 6
+                button.btn.btn-info 7
+            .btn-group
+                button.btn.btn-default.btn-circle 8
+        .btn-toolbar.m-b-10
+            .btn-group
+                button.btn.btn-default
+                    i.fa.fa-align-left
+                button.btn.btn-default
+                    i.fa.fa-align-center
+                button.btn.btn-default
+                    i.fa.fa-align-right
+            .btn-group
+                button.btn.btn-default
+                    i.fa.fa-bold
+                button.btn.btn-default
+                    i.fa.fa-italic
+                button.btn.btn-default
+                    i.fa.fa-text-width
+                .btn-group.dropdown
+                    button.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+                        | Fonts 
+                        i.fa.fa-angle-down
+                    ul.dropdown-menu
+                        li
+                            a(href='javascript:;') Arial
+                        li
+                            a(href='javascript:;') Roboto
+        h6.m-t-10.m-b-10 Vertical variants
+        .btn-group-vertical.m-r-10
+            button.btn.btn-primary Button
+            .btn-group.dropdown
+                button.btn.btn-success.dropdown-toggle(data-toggle='dropdown')
+                    | Fonts 
+                    i.fa.fa-angle-down
+                ul.dropdown-menu
+                    li
+                        a(href='javascript:;') Arial
+                    li
+                        a(href='javascript:;') Roboto
+            button.btn.btn-warning Button
+        br
+        br
+        .btn-group-vertical.m-r-10
+            button.btn.btn-info
+                i.fa.fa-star
+            button.btn.btn-info
+                i.fa.fa-line-chart
+            button.btn.btn-info
+                i.fa.fa-bell
+        .btn-group-vertical.btn-rounded
+            button.btn.btn-info
+                i.fa.fa-plane
+            button.btn.btn-info
+                i.fa.fa-bus
+            button.btn.btn-info
+                i.fa.fa-taxi
+        h6.m-t-10.m-b-10 Button group sizing
+        .btn-toolbar.m-b-10
+            .btn-group.btn-group-lg
+                button.btn.btn-default Left
+                button.btn.btn-default Middle
+                button.btn.btn-default Right
+        .btn-toolbar.m-b-10
+            .btn-group
+                button.btn.btn-default Left
+                button.btn.btn-default Middle
+                button.btn.btn-default Right
+        .btn-toolbar.m-b-10
+            .btn-group.btn-group-sm
+                button.btn.btn-default Left
+                button.btn.btn-default Middle
+                button.btn.btn-default Right
+      +panel(title='Button dropdowns')
+        .btn-group
+            button.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+                | Actions 
+                span.caret
+            ul.dropdown-menu
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li.dropdown-divider
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+        .btn-group
+            button.btn.btn-primary.dropdown-toggle(data-toggle='dropdown')
+                i.fa.fa-cogs
+                |  Actions 
+                i.fa.fa-angle-down
+            ul.dropdown-menu
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+        .btn-group
+            button.btn.btn-primary.dropdown-toggle(data-toggle='dropdown')
+                i.fa.fa-bars.m-r-5
+                i.fa.fa-angle-down
+            ul.dropdown-menu
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+        br
+        br
+        .btn-group
+            button.btn.btn-info Tools
+            button.btn.btn-info.dropdown-toggle(data-toggle='dropdown')
+                i.fa.fa-angle-down
+            ul.dropdown-menu
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+        .btn-group
+            button.btn.btn-default Tools
+            button.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+                i.fa.fa-angle-down
+            ul.dropdown-menu
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+        .btn-group
+            button.btn.btn-danger Tools
+            button.btn.btn-danger.dropdown-toggle(data-toggle='dropdown')
+                i.fa.fa-angle-down
+            ul.dropdown-menu
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+        br
+        br
+        .btn-group.dropup
+            button.btn.btn-success Tools
+            button.btn.btn-success.dropdown-toggle(data-toggle='dropdown')
+                i.fa.fa-angle-up
+            ul.dropdown-menu
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+        .btn-group.dropup
+            button.btn.btn-warning Tools
+            button.btn.btn-warning.dropdown-toggle(data-toggle='dropdown')
+                i.fa.fa-angle-up
+            ul.dropdown-menu.pull-right
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+                li
+                    a.dropdown-item(href='javascript:;') Dropdown link
+      style.
+        .btn-list-mrg-5 *:not(.btn-group):not(.btn-group-justified):not(.btn-group-vertical) > .btn {margin-bottom:5px}

@@ -1,0 +1,167 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Lists'
+  - var pageUrl = 'lists.html'
+  - var page_heading = 'Lists'
+  - var path = ['Lists']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='List groups')
+        p
+            | The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+        ul.list-group.list-group-full
+            li.list-group-item.active 1. Active item
+            li.list-group-item
+                | 2. Dapibus ac facilisis in 
+                span.badge.badge-success.float-right 4
+            li.list-group-item 3. Morbi leo risus
+            li.list-group-item.disabled
+                | 4. Disabled item 
+                span.badge.badge-danger.float-right 17
+            li.list-group-item
+                | 5. Vestibulum at eros 
+                span.badge.badge-info.badge-square.float-right NEW
+        h5.m-t-10.m-b-10.font-strong WITH DIVIDER LINE
+        ul.list-group.list-group-full.list-group-divider
+            li.list-group-item.active 1. Active item
+            li.list-group-item
+                | 2. Dapibus ac facilisis in 
+                span.badge.badge-warning.badge-square.float-right 4
+            li.list-group-item 3. Morbi leo risus
+            li.list-group-item.disabled
+                | 4. Disabled item 
+                span.badge.badge-danger.badge-square.float-right HOT
+            li.list-group-item
+                | 5. Vestibulum at eros 
+                span.badge.badge-info.float-right 3
+        h5.m-t-10.m-b-10.font-strong BORDERED
+        ul.list-group.list-group-bordered
+            li.list-group-item.active
+                | 1. Active item 
+                span.badge.badge-success.float-right 72
+            li.list-group-item
+                | 2. Dapibus ac facilisis in 
+                span.badge.badge-success.float-right 4
+            li.list-group-item 3. Morbi leo risus
+            li.list-group-item.disabled
+                | 4. Disabled item 
+                span.badge.badge-danger.float-right 17
+            li.list-group-item
+                | 5. Vestibulum at eros 
+                span.badge.badge-info.float-right 3
+        h5.m-t-10.m-b-10.font-strong LINKED ITEMS
+        ul.list-group.list-group-bordered
+            a.list-group-item.active
+                | 1. Active item 
+                span.badge.badge-success.float-right 72
+            a.list-group-item
+                | 2. Dapibus ac facilisis in 
+                span.badge.badge-success.float-right 4
+            a.list-group-item 3. Morbi leo risus
+            a.list-group-item.disabled
+                | 4. Disabled item 
+                span.badge.badge-danger.float-right 17
+            a.list-group-item
+                | 5. Vestibulum at eros 
+                span.badge.badge-info.float-right 3
+        h5.m-t-10.m-b-10.font-strong CONTEXTUAL CLASSES
+        ul.list-group.list-group-bordered
+            a.list-group-item.list-group-item-success .list-group-item-success
+            a.list-group-item.list-group-item-info .list-group-item-info
+            a.list-group-item.list-group-item-warning .list-group-item-warning
+            a.list-group-item.list-group-item-danger .list-group-item-danger
+    .col-md-6
+      +panel(title='Media List')
+        ul.media-list
+            li.media
+                a(href='javascript:;').media-img
+                    +img('users/u1.jpg')(style='width:45px')
+                .media-body
+                    h6.media-heading Media heading
+                    p
+                        | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+            li.media
+                a(href='javascript:;').media-img
+                    +img('users/u2.jpg')(style='width:45px')
+                .media-body
+                    h6.media-heading Media heading
+                    p
+                        | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                    .media
+                        a(href='javascript:;').media-img
+                            +img('users/u3.jpg')(style='width:45px')
+                        .media-body
+                            h6.media-heading Media heading
+                            p
+                                | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                            .media
+                                a(href='javascript:;').media-img
+                                    +img('users/u4.jpg')(style='width:45px')
+                                .media-body
+                                    h6.media-heading Media heading
+                                    p Cras sit amet nibh libero, in gravida nulla.
+                    .media
+                        a(href='javascript:;').media-img
+                            +img('users/u1.jpg')(style='width:45px')
+                        .media-body
+                            h6.media-heading Media heading
+                            p Cras sit amet nibh libero, in gravida nulla.
+            li.media.media-right
+                .media-body.text-right
+                    h6.media-heading Media heading
+                    p
+                        | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                a(href='javascript:;').media-img
+                    +img('users/u2.jpg')(style='width:45px')
+        h5.m-b-20.font-strong Media list
+        ul.media-list.list-unstyled
+            li.media
+                a(href='javascript:;').media-img
+                    +img('users/u1.jpg')(class='img-circle' style='width:40px')
+                .media-body
+                    h6.media-heading Jeanne
+                    small Director
+                .media-right
+                    i.fa.fa-star.font-16.color-orange
+            li.media
+                a(href='javascript:;').media-img
+                    +img('users/u2.jpg')(class='img-circle' style='width:40px')
+                .media-body
+                    h6.media-heading Becky
+                    small Frontend Master
+                .media-right
+                    i.fa.fa-star.font-16.color-red
+            li.media
+                a(href='javascript:;').media-img
+                    +img('users/u3.jpg')(class='img-circle' style='width:40px')
+                .media-body
+                    h6.media-heading Frank
+                    small Graphic Designer
+                .media-right
+                    i.fa.fa-star.font-16.color-blue
+        br
+        ul.media-list.list-unstyled
+            li.media
+                a(href='javascript:;').media-img
+                    +img('users/u1.jpg')(class='img-circle' style='width:40px')
+                .media-body
+                    h6.media-heading
+                        a(href='javascript:;') Jeanne
+                    p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus.
+            li.media
+                a(href='javascript:;').media-img
+                    +img('users/u2.jpg')(class='img-circle' style='width:40px')
+                .media-body
+                    h6.media-heading
+                        a(href='javascript:;') Becky
+                    p Nulla vel metus scelerisque ante sollicitudin commodo.
+            li.media
+                a(href='javascript:;').media-img
+                    +img('users/u3.jpg')(class='img-circle' style='width:40px')
+                .media-body
+                    h6.media-heading
+                        a(href='javascript:;') Frank
+                    p Vestibulum in vulputate at, tempus viverra turpis.

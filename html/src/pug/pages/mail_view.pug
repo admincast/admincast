@@ -1,0 +1,122 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Mail View'
+  - var pageUrl = 'mail_view.html'
+  - var page_heading = 'Mail View'
+  - var path = ['Mail View']
+
+block page_styles
+    +link('mailbox.css', 'page')
+
+block content
+  .row
+    .col-lg-3.col-md-4
+        a.btn.btn-info.btn-block(href='mail_compose.html')
+            i.fa.fa-edit
+            |  Compose
+        br
+        h6.m-t-10.m-b-10 FOLDERS
+        ul.list-group.list-group-divider.inbox-list
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-inbox
+                    |  Inbox (6) 
+                    span.badge.badge-warning.badge-square.pull-right 17
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-envelope-o
+                    |  Sent
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-star-o
+                    |  Important 
+                    span.badge.badge-success.badge-square.pull-right 2
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-file-text-o
+                    |  Drafts
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-trash-o
+                    |  Trash
+        h6.m-t-10.m-b-10 LABELS
+        ul.list-group.list-group-divider.inbox-list
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-success
+                    |  Support
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-warning
+                    |  Business
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-info
+                    |  Work
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-danger
+                    |  System
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-muted
+                    |  Social
+    .col-lg-9.col-md-8
+        #mailbox-container.ibox
+            .mailbox-header.d-flex.justify-content-between(style='border-bottom: 1px solid #e8e8e8')
+                div
+                    h5.inbox-title Save your time. Choose the best.
+                    .m-t-5.font-13
+                        span.font-strong Olivia Smith
+                        a.text-muted.m-l-5(href='javascript:;') olivia.smith@gmail.com
+                    .p-r-10.font-13 Mar 26
+                .inbox-toolbar.m-l-20
+                    button.btn.btn-default.btn-sm(data-action='reply', data-toggle='tooltip', data-original-title='Reply')
+                        i.fa.fa-reply
+                    button.btn.btn-default.btn-sm(data-toggle='tooltip', data-original-title='Delete')
+                        i.fa.fa-trash-o
+                    button.btn.btn-default.btn-sm(data-toggle='tooltip', data-original-title='Mark as important')
+                        i.fa.fa-star-o
+                    button.btn.btn-default.btn-sm(data-toggle='tooltip', data-original-title='Reply')
+                        i.fa.fa-print
+            .mailbox-body
+                p Hello admin. Can you help me?
+                p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                    strong It has survived
+                    |  not only five centuries.
+                p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                p
+                    strong Lorem Ipsum
+                    |  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+            .mailbox-body
+                .d-flex.justify-content-between.m-b-10
+                    span.font-strong
+                        i.fa.fa-paperclip
+                        |  3 attachments
+                    button.btn.btn-default.btn-sm(data-action='reply', data-toggle='tooltip', data-original-title='Download all')
+                        i.fa.fa-download
+                .mail-attachments.d-flex
+                    .card
+                        div
+                            +img('blog/storm.jpg')(class='card-img-top file-image')
+                        .card-body
+                            span storm.jpg
+                            a.btn.btn-default.btn-xs.float-right(href='javascript:;')
+                                i.fa.fa-download
+                    .card
+                        div
+                            +img('blog/horse.jpg')(class='card-img-top file-image')
+                        .card-body
+                            span horse.jpg
+                            a.btn.btn-default.btn-xs.float-right(href='javascript:;')
+                                i.fa.fa-download
+                    .card
+                        .text-center
+                            +img('file.png')(class='card-img-top file-image', height='160px')
+                        .card-body
+                            span document.txt
+                            a.btn.btn-default.btn-xs.float-right(href='javascript:;')
+                                i.fa.fa-download

@@ -1,0 +1,30 @@
+{
+  "path": {
+      "src": "../../src",
+      "output": "../../dist",
+      "bower_components": "../../src/bower_components",
+      "vendors": "../../src/vendors"
+  },
+  "build": {
+      "js": {
+          "src": "@{path.src}/js/app.js",
+          "output": "@{path.output}/assets/js"
+      },
+      "sass": {
+          "src": {
+              "bundle": "@{path.src}/sass/main.scss",
+              "themes": "@{path.src}/sass/layout/themes/*.scss",
+              "pages": "@{path.src}/sass/pages/*.css"
+          },
+          "output": {
+              "bundle": "@{path.output}/assets/css",
+              "themes": "@{path.output}/assets/css/themes",
+              "pages": "@{path.output}/assets/css/pages"
+          }
+      },
+      "pug": {
+        "src": "@{path.src}/pug/pages/*.pug",
+        "output": "@{path.output}"
+      }
+  }
+}

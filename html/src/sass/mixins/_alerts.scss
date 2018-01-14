@@ -1,0 +1,21 @@
+
+
+@mixin alert-variant($background, $border, $body-color) {
+  background-color: $background;
+  border-color: $border;
+  color: $body-color;
+
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+  .alert-link {
+    color: darken($body-color, 10%);
+  }
+  &.alert-bordered {
+      border-left: 4px solid darken($border, 15%);
+  }
+  &.alert-bordered-right {
+      border-right: 4px solid darken($border, 15%);
+  }
+}
+

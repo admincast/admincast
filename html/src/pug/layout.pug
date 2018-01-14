@@ -1,0 +1,67 @@
+include config.pug
+include vars.pug
+include mixins.pug
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width initial-scale=1.0")
+    title #{titlePrefix} | #{pageTitle}
+    // GLOBAL MAINLY STYLES
+    +link('bootstrap/dist/css/bootstrap.min.css', 'plugin')
+    +link('font-awesome/css/font-awesome.min.css', 'plugin')
+    +link('themify-icons/css/themify-icons.css', 'plugin')
+    // PLUGINS STYLES
+    block plugins-styles
+    // THEME STYLES
+    +link('assets/css/main.min.css')
+    // PAGE LEVEL STYLES
+    block page_styles
+  body.fixed-navbar(class=body_class)
+    .page-wrapper
+      // START HEADER
+      include blocks/header.pug
+      // END HEADER
+      // START SIDEBAR
+      include blocks/sidebar.pug
+      // END SIDEBAR
+      .content-wrapper
+        // START PAGE CONTENT
+        if page_heading
+          .page-heading
+            h1.page-title= page_heading
+            ol.breadcrumb
+              li.breadcrumb-item
+                a(href=HOME.url): i.la.la-home.font-20
+              - for (var i = 0; i < path.length; i++) {
+                li.breadcrumb-item= path[i]
+              - }
+        block page-header
+        .page-content.fade-in-up
+          block content
+          include blocks/ad-banner.pug
+        // END PAGE CONTENT
+        include blocks/footer.pug
+    include blocks/configbox.pug
+    
+    // BEGIN PAGA BACKDROPS
+    .sidenav-backdrop.backdrop
+    .preloader-backdrop
+      .page-preloader Loading
+    // END PAGA BACKDROPS
+
+    // CORE PLUGINS
+    +script('jquery/dist/jquery.min.js', 'plugin')
+    +script('popper.js/dist/umd/popper.min.js', 'plugin')
+    +script('bootstrap/dist/js/bootstrap.min.js', 'plugin')
+    +script('metisMenu/dist/metisMenu.min.js', 'plugin')
+    +script('jquery-slimscroll/jquery.slimscroll.min.js', 'plugin')
+    // PAGE LEVEL PLUGINS
+    block plugins
+    // CORE SCRIPTS
+    +script('assets/js/app.min.js')
+    // PAGE LEVEL SCRIPTS
+    block scripts

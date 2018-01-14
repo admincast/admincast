@@ -1,0 +1,104 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Badges & Progress'
+  - var pageUrl = 'badges_progress.html'
+  - var page_heading = 'Badges & Progress'
+  - var path = ['badges &Progress']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='Badges')
+        p
+          span.badge.badge-default.m-r-5.m-b-5 DEFAULT
+          span.badge.badge-primary.m-r-5.m-b-5 PRIMARY
+          span.badge.badge-info.m-r-5.m-b-5 INFO
+          span.badge.badge-success.m-r-5.m-b-5 SUCCESS
+          span.badge.badge-warning.m-r-5.m-b-5 WARNING
+          span.badge.badge-danger.m-b-5 DANGER
+        p
+          span.badge.badge-default.badge-pill.m-r-5.m-b-5 DEFAULT
+          span.badge.badge-primary.badge-pill.m-r-5.m-b-5 PRIMARY
+          span.badge.badge-info.badge-pill.m-r-5.m-b-5 INFO
+          span.badge.badge-success.badge-pill.m-r-5.m-b-5 SUCCESS
+          span.badge.badge-warning.badge-pill.m-r-5.m-b-5 WARNING
+          span.badge.badge-danger.badge-pill.m-b-5 DANGER
+        p
+          span.badge.badge-default.badge-circle.m-r-5.m-b-5 9
+          span.badge.badge-primary.badge-circle.m-r-5.m-b-5 3
+          span.badge.badge-info.badge-circle.m-r-5.m-b-5 7
+          span.badge.badge-success.badge-circle.m-r-5.m-b-5 8
+          span.badge.badge-warning.badge-circle.m-r-5.m-b-5 4
+          span.badge.badge-danger.badge-circle.m-b-5 1
+        p
+          span.badge.badge-default.m-r-5.m-b-5 9
+          span.badge.badge-primary.m-r-5.m-b-5 NEW
+          span.badge.badge-info.m-r-5.m-b-5 7
+          span.badge.badge-success.m-r-5.m-b-5 8
+          span.badge.badge-warning.m-r-5.m-b-5 145
+          span.badge.badge-danger.m-b-5 VIP
+
+    .col-md-6
+      +panel(title='Progress Bars')
+        .progress.m-b-20
+            .progress-bar.progress-bar-success(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+        .progress.m-b-20
+            .progress-bar.progress-bar-info(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100') 50%
+        .progress.m-b-20
+            .progress-bar.progress-bar-warning(role='progressbar', style='width:75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+        .progress.m-b-20
+            .progress-bar.pull-right(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%;') 60%
+        .progress.m-b-20
+            .progress-bar.progress-bar-danger.pull-right(role='progressbar', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100', style='width:30%;') 30%
+        h6 Sizing
+        .progress.m-b-20
+            .progress-bar.progress-bar-warning(role='progressbar', style='width:75%; height:10px', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+        .progress.m-b-20
+            .progress-bar.progress-bar-danger(role='progressbar', style='width:50%; height:4px', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+        h6 Striped
+        .progress.m-b-20
+            .progress-bar.progress-bar-success.progress-bar-striped(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+        .progress.m-b-20
+            .progress-bar.progress-bar-info.progress-bar-striped(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+        h6 Animated
+        .progress.m-b-20
+            #ex-progress.progress-bar.progress-bar-striped.active(role='progressbar', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100', style='width: 75%')
+        button#btn-toggle-progress.btn.btn-gray(type='button', data-toggle='button') Toggle animation
+        h6 Stacked
+        .progress.m-b-20
+            .progress-bar.progress-bar-success(style='width:35%')
+                span.sr-only 35% Complete (success)
+            .progress-bar.progress-bar-warning(style='width:20%')
+                span.sr-only 20% Complete (warning)
+            .progress-bar.progress-bar-danger(style='width:10%')
+                span.sr-only 10% Complete (danger)
+        h6 Vertical
+        .row
+            .col-sm-6.m-b-20(style='height:180px;')
+                .progress.progress-vertical
+                    .progress-bar.progress-bar-success(role='progressbar', style='height: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                .progress.progress-vertical
+                    .progress-bar.progress-bar-info(role='progressbar', style='height: 40%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                .progress.progress-vertical
+                    .progress-bar.progress-bar-warning(role='progressbar', style='height: 65%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                .progress.progress-vertical
+                    .progress-bar.progress-bar-danger(role='progressbar', style='height: 85%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+            .col-sm-6.m-b-20(style='height:180px;')
+                .progress.progress-vertical.progress-bottom
+                    .progress-bar.progress-bar-success(role='progressbar', style='height: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                .progress.progress-vertical.progress-bottom
+                    .progress-bar.progress-bar-info(role='progressbar', style='height: 40%', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100')
+                .progress.progress-vertical.progress-bottom
+                    .progress-bar.progress-bar-warning.progress-bar-striped.active(role='progressbar', style='height: 65%', aria-valuenow='65', aria-valuemin='0', aria-valuemax='100')
+                .progress.progress-vertical.progress-bottom
+                    .progress-bar.progress-bar-danger(role='progressbar', style='height: 85%', aria-valuenow='50', aria-valuemin='85', aria-valuemax='100')
+        div(style='height:150px;')
+            .progress.progress-vertical.progress-bottom.progress-wide
+                .progress-bar.progress-bar-danger(role='progressbar', style='height: 85%', aria-valuenow='85', aria-valuemin='0', aria-valuemax='100') 85%
+            .progress.progress-vertical.progress-bottom.progress-wide
+                .progress-bar.progress-bar-warning(role='progressbar', style='height: 65%', aria-valuenow='65', aria-valuemin='0', aria-valuemax='100') 65%
+            .progress.progress-vertical.progress-bottom.progress-wide
+                .progress-bar.progress-bar-info(role='progressbar', style='height: 40%', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100') 40%
+            .progress.progress-vertical.progress-bottom.progress-wide
+                .progress-bar.progress-bar-success(role='progressbar', style='height: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100') 25%

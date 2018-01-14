@@ -1,0 +1,37 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Morris.js Charts'
+  - var pageUrl = 'charts_morris.html'
+  - var page_heading = 'Morris Charts'
+  - var path = ['Morris Charts']
+
+block plugins-styles
+  +link('morris.js/morris.css','plugin')
+
+block plugins
+  +script('morris.js/morris.min.js', 'plugin')
+  +script('raphael/raphael.min.js', 'plugin')
+
+block scripts
+  +script('charts_morris_demo.js', 'page')
+
+block content
+    .row
+      .col-md-6
+        +panel('Area Chart example')
+          #morris_area_chart(style='height:280px;')
+      .col-md-6
+        +panel('Line Chart example')
+          #morris_line_chart(style='height:280px;')
+    .row
+      .col-md-6
+        +panel('Bar Chart example')
+          #morris_bar_chart(style='height:280px;')
+      .col-md-6
+        +panel('Donut Chart example')
+          #morris_donut_chart(style='height:280px;')
+    .row
+      .col-md-6
+        +panel('Line Chart example')
+          #morris_line_chart_2(style='height:280px;')

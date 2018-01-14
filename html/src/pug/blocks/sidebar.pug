@@ -1,0 +1,49 @@
+mixin navItem(item, current)
+  if item.header
+    li.heading= item.name
+  else
+    if !item.childrens
+      li
+        a(href=item.url class=current===item.url ? 'active' : '')
+          i.sidebar-item-icon(class=item.icon)
+          span.nav-label!= item.name
+    else
+      - var x = 0;
+      - var y = 0;
+      each i in item.childrens
+        if current === i.url
+          - x = current;
+        else if i.childrens
+          each ii in i.childrens
+            if current === ii.url
+              - x = current;
+              - y = current;
+      li(class=current===x ? 'active' : '')
+        a(href='javascript:;')
+          i.sidebar-item-icon(class=item.icon)
+          span.nav-label= item.name
+          i.fa.fa-angle-left.arrow
+        ul.nav-2-level.collapse(class=current===x ? 'in' : '')
+          each i in item.childrens
+            li(class=current===y ? 'active' : '')
+              if !i.childrens
+                a(href=i.url class=current===i.url ? 'active' : '')= i.name
+              else
+                a(href='javascript:;')
+                  span.nav-label= i.name
+                  i.fa.fa-angle-left.arrow
+                ul.nav-3-level.collapse
+                  each iii in i.childrens
+                    li: a(href=iii.url class=current===iii.url ? 'active' : '')= iii.name
+
+nav#sidebar.page-sidebar
+  #sidebar-collapse
+    .admin-block.d-flex
+      div
+        +img('admin-avatar.png')(width='45px')
+      .admin-info
+        .font-strong James Brown
+        small Administrator
+    ul.side-menu.metismenu
+      each i in menu
+        +navItem(i, pageUrl)

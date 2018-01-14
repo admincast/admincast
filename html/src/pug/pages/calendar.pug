@@ -1,0 +1,130 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Calendar'
+  - var pageUrl = 'calendar.html'
+  - var page_heading = 'Calendar'
+  - var path = ['Calendar']
+
+block plugins-styles
+    +link('fullcalendar/dist/fullcalendar.min.css', 'plugin')
+    +link('fullcalendar/dist/fullcalendar.print.min.css', 'plugin')(media='print')
+
+block plugins
+    +script('moment/min/moment.min.js', 'plugin')
+    +script('fullcalendar/dist/fullcalendar.min.js', 'plugin')
+    +script('jquery-ui/jquery-ui.min.js', 'plugin')
+
+block content
+  .row
+    .col-md-3
+        #external-events
+            h5.m-b-10 Draggable Events
+            .ex-event.bg-green(data-class='bg-green') My Event 1
+            .ex-event.bg-blue(data-class='bg-blue') My Event 2
+            .ex-event.bg-orange(data-class='bg-orange') My Event 3
+            .ex-event.bg-red(data-class='bg-red') My Event 4
+            .ex-event.bg-silver(data-class='bg-silver') My Event 5
+            p.m-l-10.m-t-20
+                label
+                    input#drop-remove.m-r-5(type='checkbox')
+                    | remove after drop
+    .col-md-9
+      +panel()
+        #calendar
+        // New Event Dialog
+        #new-event-modal.modal.fade(tabindex='-1', role='dialog')
+            .modal-dialog(role='document')
+                form.modal-content.form-horizontal(action='javascript:;')
+                    .modal-header.bg-silver-100
+                        h4.modal-title New Event
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body
+                        .form-group.row
+                            label.col-sm-2.col-form-label Title:
+                            .col-sm-10
+                                input#new-event-title.form-control(type='text')
+                        #date_1.form-group.row
+                            label.col-sm-2.col-form-label Start:
+                            .col-sm-10
+                                .input-group.datepicker.date
+                                    span.input-group-addon.bg-white
+                                        i.fa.fa-calendar
+                                    input#new-event-start.form-control(type='text', value='')
+                        .form-group.row
+                            label.col-sm-2.col-form-label End:
+                            .col-sm-10
+                                .input-group.datepicker.date
+                                    span.input-group-addon.bg-white
+                                        i.fa.fa-calendar
+                                    input#new-event-end.form-control(type='text')
+                        .form-group.row
+                            label.col-sm-2.col-form-label Color:
+                            .col-sm-10
+                                select#new-event-color.form-control
+                                    option(value='bg-blue') Blue
+                                    option(value='bg-red') Red
+                                    option(value='bg-green') Green
+                                    option(value='bg-orange') Orange
+                                    option(value='bg-silver') Silver
+                        .form-group.row
+                            .col-sm-10.ml-sm-auto
+                                label.ui-checkbox.ui-checkbox-info
+                                    input#new-event-allDay(type='checkbox')
+                                    span.input-span
+                                    | All Day
+                    .modal-footer
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+                        button#addEventButton.btn.btn-info(type='submit') Add event
+        // End New Event Dialog
+        // Event Detail Dialog
+        #event-modal.modal.fade(tabindex='-1', role='dialog')
+            .modal-dialog(role='document')
+                form.modal-content.form-horizontal(action='javascript:;')
+                    .modal-header.bg-silver-100
+                        h4.modal-title Edit Event
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body
+                        .form-group.row
+                            label.col-sm-2.col-form-label Title:
+                            .col-sm-10
+                                input#event-title.form-control(type='text')
+                        #date_1.form-group.row
+                            label.col-sm-2.col-form-label Start:
+                            .col-sm-10
+                                .input-group.datepicker.date
+                                    span.input-group-addon.bg-white
+                                        i.fa.fa-calendar
+                                    input#event-start.form-control(type='text', value='')
+                        .form-group.row
+                            label.col-sm-2.col-form-label End:
+                            .col-sm-10
+                                .input-group.datepicker.date
+                                    span.input-group-addon.bg-white
+                                        i.fa.fa-calendar
+                                    input#event-end.form-control(type='text')
+                        .form-group.row
+                            label.col-sm-2.col-form-label Color:
+                            .col-sm-10
+                                select#event-color.form-control
+                                    option(value='bg-blue') Blue
+                                    option(value='bg-red') Red
+                                    option(value='bg-green') Green
+                                    option(value='bg-orange') Orange
+                                    option(value='bg-silver') Silver
+                        .form-group.row
+                            .col-sm-10.ml-sm-auto
+                                label.ui-checkbox.ui-checkbox-info
+                                    input#event-allDay(type='checkbox')
+                                    span.input-span
+                                    | All Day
+                    .modal-footer
+                        button#editEventButton.btn.btn-info(type='submit',) Save
+                        button#deleteEventButton.btn.btn-danger(type='button', data-dismiss='modal') Delete
+                        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        // End Event Detail Dialog
+
+block scripts
+  +script('calendar-demo.js', 'page')

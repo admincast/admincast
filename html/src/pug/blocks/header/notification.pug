@@ -1,0 +1,39 @@
+li.dropdown.dropdown-notification
+  a.nav-link(data-toggle='dropdown').dropdown-toggle
+    i.fa.fa-bell-o.rel
+      span.notify-signal
+  ul.dropdown-menu.dropdown-menu-right.dropdown-menu-media
+    li.dropdown-menu-header
+      div
+        span <strong>5 New</strong> Notifications
+        a(href='javascript:;').pull-right view all
+    li(data-height='240px' data-color="#71808f").list-group.list-group-divider.scroller
+      div
+        a.list-group-item
+          div.media
+            div.media-img
+              span.badge.badge-success.badge-big: i.fa.fa-check
+            div.media-body
+              div.font-13 4 task compiled
+              small.text-muted 22 mins
+        a.list-group-item
+          div.media
+            div.media-img
+              span.badge.badge-default.badge-big: i.fa.fa-shopping-basket
+            div.media-body
+              div.font-13 You have 12 new orders
+              small.text-muted 40 mins
+        a.list-group-item
+          div.media
+            div.media-img
+              span.badge.badge-danger.badge-big: i.fa.fa-bolt
+            div.media-body
+              div.font-13 Server #7 rebooted
+              small.text-muted 2 hrs
+        a.list-group-item
+          div.media
+            div.media-img
+              span.badge.badge-success.badge-big: i.fa.fa-user
+            div.media-body
+              div.font-13 New user registered
+              small.text-muted 2 hrs

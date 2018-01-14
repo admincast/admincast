@@ -1,0 +1,460 @@
+<div class="page-heading">
+    <h1 class="page-title">Buttons</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html"><i class="la la-home font-20"></i></a>
+        </li>
+        <li class="breadcrumb-item">Buttons</li>
+    </ol>
+</div>
+<div class="page-content fade-in-up">
+    <div class="row btn-list-mrg-5">
+        <div class="col-md-6">
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Basic Buttons</div>
+                    <div class="ibox-tools">
+                        <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <p>The most basic buttons without any icons or properties</p>
+                    <button class="btn btn-default">Default</button>
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-success">Success</button>
+                    <button class="btn btn-info">Info</button>
+                    <button class="btn btn-warning">Warning</button>
+                    <button class="btn btn-danger">Danger</button>
+                    <button class="btn btn-link">Link</button>
+                    <h6 class="m-t-10 m-b-10">Outline buttons</h6>
+                    <button class="btn btn-outline-default">Default</button>
+                    <button class="btn btn-outline-primary">Primary</button>
+                    <button class="btn btn-outline-success">Success</button>
+                    <button class="btn btn-outline-info">Info</button>
+                    <button class="btn btn-outline-warning">Warning</button>
+                    <button class="btn btn-outline-danger">Danger</button>
+                    <h6 class="m-t-10">Fixed width</h6>
+                    <p>Add class <code>.btn-fix</code> for the minimum fixed width</p>
+                    <button class="btn btn-default btn-fix">Default</button>
+                    <button class="btn btn-primary btn-fix">Primary</button>
+                    <button class="btn btn-success btn-fix">Success</button>
+                    <button class="btn btn-info btn-fix">Info</button>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Size Options</div>
+                </div>
+                <div class="ibox-body">
+                    <p>Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p>
+                    <button class="btn btn-primary btn-lg">Large button</button>
+                    <button class="btn btn-primary">Default button</button>
+                    <button class="btn btn-primary btn-sm">Small button</button>
+                    <button class="btn btn-primary btn-xs">Mini button</button>
+                    <p>Create block level buttons—those that span the full width of a parent—by adding <code>.btn-block</code> .</p>
+                    <button class="btn btn-success btn-block">Block button</button>
+                    <button class="btn btn-outline-info btn-block">Block button</button>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Rounded, Circle Buttons</div>
+                </div>
+                <div class="ibox-body">
+                    <p>add <code>.btn-rounded</code> for the rounded buttons</p>
+                    <button class="btn btn-default btn-rounded">Rounded</button>
+                    <button class="btn btn-primary btn-rounded">Rounded</button>
+                    <button class="btn btn-success btn-rounded">Rounded</button>
+                    <button class="btn btn-info btn-rounded">Rounded</button>
+                    <p>add <code>.btn-circle</code> for the circle buttons</p>
+                    <button class="btn btn-default btn-circle btn-lg"><i class="fa fa-link"></i></button>
+                    <button class="btn btn-primary btn-circle btn-lg"><i class="fa fa-star"></i></button>
+                    <button class="btn btn-danger btn-circle btn-lg"><i class="fa fa-bell"></i></button>
+                    <button class="btn btn-info btn-circle btn-lg"><i class="fa fa-heartbeat"></i></button><br>
+                    <button class="btn btn-default btn-circle"><i class="fa fa-history"></i></button>
+                    <button class="btn btn-warning btn-circle"><i class="fa fa-bullhorn"></i></button>
+                    <button class="btn btn-success btn-circle"><i class="fa fa-life-ring"></i></button>
+                    <button class="btn btn-info btn-circle"><i class="fa fa-upload"></i></button>
+                    <button class="btn btn-primary btn-circle"><i class="fa fa-thumbs-up"></i></button>
+                    <button class="btn btn-warning btn-circle"><i class="fa fa-eye"></i></button>
+                    <button class="btn btn-danger btn-circle"><i class="fa fa-times"></i></button>
+                    <button class="btn btn-success btn-circle"><i class="fa fa-check"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Button states</div>
+                    <div class="ibox-tools">
+                        <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <h6 class="m-b-10">Disabled and Active states</h6>
+                    <button class="btn btn-info disabled">Disabled</button>
+                    <button class="btn btn-danger" disabled="">Disabled</button>
+                    <button class="btn btn-default" disabled="">Disabled</button>
+                    <button class="btn btn-success active" aria-pressed="true">Active</button>
+                    <button class="btn btn-default active" aria-pressed="true">Active</button>
+                    <h6 class="m-t-10 m-b-10">Toggle states</h6>
+                    <button class="btn btn-info m-r-5" data-toggle="button" aria-pressed="false">
+                        <span class="active-hidden"><i class="fa fa-cloud-upload"></i> Upload</span>
+                        <span class="active-visible"><i class="fa fa-check"></i> Uploaded</span>
+                    </button>
+                    <button class="btn btn-default btn-circle m-r-5" data-toggle="button" aria-pressed="false">
+                        <span class="active-hidden"><i class="fa fa-play"></i></span>
+                        <span class="active-visible"><i class="fa fa-pause text-primary"></i></span>
+                    </button>
+                    <button class="btn btn-outline-default m-r-5" data-toggle="button" aria-pressed="false">
+                        <span class="active-hidden"><i class="fa fa-thumbs-up"></i></span>
+                        <span class="active-visible"><i class="fa fa-thumbs-up text-primary"></i></span>
+                    </button>
+                    <button class="btn btn-outline-success" data-toggle="button" aria-pressed="false">Single toggle</button>
+                    <h6 class="m-t-10 m-b-10">Checkbox</h6>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-default">Option 1
+                            <input type="checkbox">
+                        </label>
+                        <label class="btn btn-default active">Option 2
+                            <input type="checkbox" checked="">
+                        </label>
+                        <label class="btn btn-default">Option 3
+                            <input type="checkbox">
+                        </label>
+                    </div><br><br>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-info">Option 1
+                            <input type="checkbox">
+                        </label>
+                        <label class="btn btn-info">Option 2
+                            <input type="checkbox">
+                        </label>
+                        <label class="btn btn-info">Option 3
+                            <input type="checkbox">
+                        </label>
+                    </div>
+                    <h6 class="m-t-10 m-b-10">Radio</h6>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-success">Option 1
+                            <input type="radio">
+                        </label>
+                        <label class="btn btn-success active">Option 2
+                            <input type="radio" checked="">
+                        </label>
+                        <label class="btn btn-success">Option 3
+                            <input type="radio">
+                        </label>
+                    </div><br><br>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-outline-info"><i class="fa fa-check active-visible"></i> Male
+                            <input type="radio">
+                        </label>
+                        <label class="btn btn-outline-info"><i class="fa fa-check active-visible"></i> Female
+                            <input type="radio">
+                        </label>
+                        <label class="btn btn-outline-info"><i class="fa fa-check active-visible"></i> N/A
+                            <input type="radio">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Grouped Buttons</div>
+                    <div class="ibox-tools">
+                        <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <div class="btn-group m-b-10">
+                        <button class="btn btn-default">Left</button>
+                        <button class="btn btn-default">Middle</button>
+                        <button class="btn btn-default">Right</button>
+                    </div><br>
+                    <div class="btn-group m-b-10">
+                        <button class="btn btn-success"><i class="fa fa-star"></i> Stared</button>
+                        <button class="btn btn-danger"><i class="fa fa-user"></i> Users</button>
+                        <button class="btn btn-info"><i class="fa fa-cloud-upload"></i> Upload</button>
+                        <div class="btn-group dropdown">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">More <i class="fa fa-angle-down"></i></button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="javascript:;">Dropdown link</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Dropdown link</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><br>
+                    <div class="btn-group m-b-10 btn-rounded">
+                        <button class="btn btn-success"><i class="fa fa-star"></i> Stared</button>
+                        <button class="btn btn-danger"><i class="fa fa-user"></i> Users</button>
+                        <button class="btn btn-info"><i class="fa fa-cloud-upload"></i> Upload</button>
+                    </div><br>
+                    <div class="btn-group m-b-10">
+                        <button class="btn btn-default labeled">
+                            <span class="btn-label"><i class="fa fa-backward"></i></span>Back</button>
+                        <button class="btn btn-default"><i class="fa fa-play m-r-5"></i> Play</button>
+                        <button class="btn btn-default labeled right">Forward
+                            <span class="btn-label"><i class="fa fa-forward"></i></span>
+                        </button>
+                    </div>
+                    <h6 class="m-t-10 m-b-10">Button toolbar</h6>
+                    <div class="btn-toolbar m-b-10">
+                        <div class="btn-group">
+                            <button class="btn btn-default">1</button>
+                            <button class="btn btn-default">2</button>
+                            <button class="btn btn-default">3</button>
+                            <button class="btn btn-default">4</button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-default">5</button>
+                            <button class="btn btn-default">6</button>
+                            <button class="btn btn-default">7</button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-default">8</button>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar m-b-10">
+                        <div class="btn-group">
+                            <button class="btn btn-success">1</button>
+                            <button class="btn btn-danger">2</button>
+                            <button class="btn btn-info">3</button>
+                            <button class="btn btn-default">4</button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-warning">5</button>
+                            <button class="btn btn-primary">6</button>
+                            <button class="btn btn-info">7</button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-default">8</button>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar m-b-10">
+                        <div class="btn-group btn-rounded">
+                            <button class="btn btn-success">1</button>
+                            <button class="btn btn-danger">2</button>
+                            <button class="btn btn-info">3</button>
+                            <button class="btn btn-default">4</button>
+                        </div>
+                        <div class="btn-group btn-rounded">
+                            <button class="btn btn-warning">5</button>
+                            <button class="btn btn-primary">6</button>
+                            <button class="btn btn-info">7</button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-default btn-circle">8</button>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar m-b-10">
+                        <div class="btn-group">
+                            <button class="btn btn-default"><i class="fa fa-align-left"></i></button>
+                            <button class="btn btn-default"><i class="fa fa-align-center"></i></button>
+                            <button class="btn btn-default"><i class="fa fa-align-right"></i></button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-default"><i class="fa fa-bold"></i></button>
+                            <button class="btn btn-default"><i class="fa fa-italic"></i></button>
+                            <button class="btn btn-default"><i class="fa fa-text-width"></i></button>
+                            <div class="btn-group dropdown">
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Fonts <i class="fa fa-angle-down"></i></button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="javascript:;">Arial</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">Roboto</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="m-t-10 m-b-10">Vertical variants</h6>
+                    <div class="btn-group-vertical m-r-10">
+                        <button class="btn btn-primary">Button</button>
+                        <div class="btn-group dropdown">
+                            <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Fonts <i class="fa fa-angle-down"></i></button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="javascript:;">Arial</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">Roboto</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-warning">Button</button>
+                    </div><br><br>
+                    <div class="btn-group-vertical m-r-10">
+                        <button class="btn btn-info"><i class="fa fa-star"></i></button>
+                        <button class="btn btn-info"><i class="fa fa-line-chart"></i></button>
+                        <button class="btn btn-info"><i class="fa fa-bell"></i></button>
+                    </div>
+                    <div class="btn-group-vertical btn-rounded">
+                        <button class="btn btn-info"><i class="fa fa-plane"></i></button>
+                        <button class="btn btn-info"><i class="fa fa-bus"></i></button>
+                        <button class="btn btn-info"><i class="fa fa-taxi"></i></button>
+                    </div>
+                    <h6 class="m-t-10 m-b-10">Button group sizing</h6>
+                    <div class="btn-toolbar m-b-10">
+                        <div class="btn-group btn-group-lg">
+                            <button class="btn btn-default">Left</button>
+                            <button class="btn btn-default">Middle</button>
+                            <button class="btn btn-default">Right</button>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar m-b-10">
+                        <div class="btn-group">
+                            <button class="btn btn-default">Left</button>
+                            <button class="btn btn-default">Middle</button>
+                            <button class="btn btn-default">Right</button>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar m-b-10">
+                        <div class="btn-group btn-group-sm">
+                            <button class="btn btn-default">Left</button>
+                            <button class="btn btn-default">Middle</button>
+                            <button class="btn btn-default">Right</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Button dropdowns</div>
+                </div>
+                <div class="ibox-body">
+                    <div class="btn-group">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Actions
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i> Actions <i class="fa fa-angle-down"></i></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars m-r-5"></i><i class="fa fa-angle-down"></i></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                        </ul>
+                    </div><br><br>
+                    <div class="btn-group">
+                        <button class="btn btn-info">Tools</button>
+                        <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default">Tools</button>
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-danger">Tools</button>
+                        <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                        </ul>
+                    </div><br><br>
+                    <div class="btn-group dropup">
+                        <button class="btn btn-success">Tools</button>
+                        <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-up"></i></button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group dropup">
+                        <button class="btn btn-warning">Tools</button>
+                        <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-up"></i></button>
+                        <ul class="dropdown-menu pull-right">
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="javascript:;">Dropdown link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .btn-list-mrg-5 *:not(.btn-group):not(.btn-group-justified):not(.btn-group-vertical)>.btn {
+                    margin-bottom: 5px
+                }
+            </style>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Vector maps'
+  - var pageUrl = 'maps_vector.html'
+  - var page_heading = 'Vector maps'
+  - var path = ['Vector maps']
+
+block plugins-styles
+    +link('jvectormap/jquery-jvectormap-2.0.3.css', 'plugin')
+
+block plugins
+    +script('jvectormap/jquery-jvectormap-2.0.3.min.js', 'plugin')
+    +script('jvectormap/jquery-jvectormap-world-mill-en.js', 'plugin')
+    +script('jvectormap/jquery-jvectormap-us-aea-en.js', 'plugin')
+
+block scripts
+  +script('jvectormap-demo.js', 'page')
+
+block content
+    .row
+      .col-md-6
+        +panel('World map')
+          #world_map(style='height: 300px')
+      .col-md-6
+        +panel('USA map')
+          #usa_map(style='height: 300px')

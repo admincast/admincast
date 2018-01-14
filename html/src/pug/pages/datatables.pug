@@ -1,0 +1,302 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'DataTables'
+  - var pageUrl = 'datatables.html'
+  - var page_heading = 'DataTables'
+  - var path = ['DataTables']
+
+block plugins
+  +script('DataTables/datatables.min.js', 'plugin')
+
+block plugins-styles
+  +link('DataTables/datatables.min.css','plugin')
+
+block content
+    +panel('Data Table')
+      table#example-table.table.table-striped.table-bordered.table-hover(cellspacing='0', width='100%')
+        thead
+          tr
+            th Name
+            th Position
+            th Office
+            th Age
+            th Start date
+            th Salary
+        tfoot
+          tr
+            th Name
+            th Position
+            th Office
+            th Age
+            th Start date
+            th Salary
+        tbody
+          tr
+            td Yuri Berry
+            td Chief Marketing Officer (CMO)
+            td New York
+            td 40
+            td 2009/06/25
+            td $675,000
+          tr
+            td Caesar Vance
+            td Pre-Sales Support
+            td New York
+            td 21
+            td 2011/12/12
+            td $106,450
+          tr
+            td Doris Wilder
+            td Sales Assistant
+            td Sidney
+            td 23
+            td 2010/09/20
+            td $85,600
+          tr
+            td Angelica Ramos
+            td Chief Executive Officer (CEO)
+            td London
+            td 47
+            td 2009/10/09
+            td $1,200,000
+          tr
+            td Gavin Joyce
+            td Developer
+            td Edinburgh
+            td 42
+            td 2010/12/22
+            td $92,575
+          tr
+            td Jennifer Chang
+            td Regional Director
+            td Singapore
+            td 28
+            td 2010/11/14
+            td $357,650
+          tr
+            td Brenden Wagner
+            td Software Engineer
+            td San Francisco
+            td 28
+            td 2011/06/07
+            td $206,850
+          tr
+            td Fiona Green
+            td Chief Operating Officer (COO)
+            td San Francisco
+            td 48
+            td 2010/03/11
+            td $850,000
+          tr
+            td Shou Itou
+            td Regional Marketing
+            td Tokyo
+            td 20
+            td 2011/08/14
+            td $163,000
+          tr
+            td Michelle House
+            td Integration Specialist
+            td Sidney
+            td 37
+            td 2011/06/02
+            td $95,400
+          tr
+            td Suki Burks
+            td Developer
+            td London
+            td 53
+            td 2009/10/22
+            td $114,500
+          tr
+            td Prescott Bartlett
+            td Technical Author
+            td London
+            td 27
+            td 2011/05/07
+            td $145,000
+          tr
+            td Gavin Cortez
+            td Team Leader
+            td San Francisco
+            td 22
+            td 2008/10/26
+            td $235,500
+          tr
+            td Martena Mccray
+            td Post-Sales support
+            td Edinburgh
+            td 46
+            td 2011/03/09
+            td $324,050
+          tr
+            td Unity Butler
+            td Marketing Designer
+            td San Francisco
+            td 47
+            td 2009/12/09
+            td $85,675
+          tr
+            td Howard Hatfield
+            td Office Manager
+            td San Francisco
+            td 51
+            td 2008/12/16
+            td $164,500
+          tr
+            td Hope Fuentes
+            td Secretary
+            td San Francisco
+            td 41
+            td 2010/02/12
+            td $109,850
+          tr
+            td Vivian Harrell
+            td Financial Controller
+            td San Francisco
+            td 62
+            td 2009/02/14
+            td $452,500
+          tr
+            td Timothy Mooney
+            td Office Manager
+            td London
+            td 37
+            td 2008/12/11
+            td $136,200
+          tr
+            td Jackson Bradshaw
+            td Director
+            td New York
+            td 65
+            td 2008/09/26
+            td $645,750
+          tr
+            td Olivia Liang
+            td Support Engineer
+            td Singapore
+            td 64
+            td 2011/02/03
+            td $234,500
+          tr
+            td Bruno Nash
+            td Software Engineer
+            td London
+            td 38
+            td 2011/05/03
+            td $163,500
+          tr
+            td Sakura Yamamoto
+            td Support Engineer
+            td Tokyo
+            td 37
+            td 2009/08/19
+            td $139,575
+          tr
+            td Thor Walton
+            td Developer
+            td New York
+            td 61
+            td 2013/08/11
+            td $98,540
+          tr
+            td Finn Camacho
+            td Support Engineer
+            td San Francisco
+            td 47
+            td 2009/07/07
+            td $87,500
+          tr
+            td Serge Baldwin
+            td Data Coordinator
+            td Singapore
+            td 64
+            td 2012/04/09
+            td $138,575
+          tr
+            td Zenaida Frank
+            td Software Engineer
+            td New York
+            td 63
+            td 2010/01/04
+            td $125,250
+          tr
+            td Zorita Serrano
+            td Software Engineer
+            td San Francisco
+            td 56
+            td 2012/06/01
+            td $115,000
+          tr
+            td Jennifer Acosta
+            td Junior Javascript Developer
+            td Edinburgh
+            td 43
+            td 2013/02/01
+            td $75,650
+          tr
+            td Cara Stevens
+            td Sales Assistant
+            td New York
+            td 46
+            td 2011/12/06
+            td $145,600
+          tr
+            td Hermione Butler
+            td Regional Director
+            td London
+            td 47
+            td 2011/03/21
+            td $356,250
+          tr
+            td Lael Greer
+            td Systems Administrator
+            td London
+            td 21
+            td 2009/02/27
+            td $103,500
+          tr
+            td Jonas Alexander
+            td Developer
+            td San Francisco
+            td 30
+            td 2010/07/14
+            td $86,500
+          tr
+            td Shad Decker
+            td Regional Director
+            td Edinburgh
+            td 51
+            td 2008/11/13
+            td $183,000
+          tr
+            td Michael Bruce
+            td Javascript Developer
+            td Singapore
+            td 29
+            td 2011/06/27
+            td $183,000
+          tr
+            td Donna Snider
+            td Customer Support
+            td New York
+            td 27
+            td 2011/01/25
+            td $112,000
+
+block scripts
+  script(type='text/javascript').
+    $(function(){
+      $('#example-table').DataTable({
+        pageLength: 10,
+        //"ajax": '#{DEMO_PATH}data/table_data.json',
+        /*"columns": [
+            { "data": "name" },
+            { "data": "office" },
+            { "data": "extn" },
+            { "data": "start_date" },
+            { "data": "salary" }
+        ]*/
+      });
+    })

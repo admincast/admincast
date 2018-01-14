@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Chart.js'
+  - var pageUrl = 'chartjs.html'
+  - var page_heading = 'Chart.js'
+  - var path = ['Chart.js']
+
+block plugins
+  +script('chart.js/dist/Chart.min.js', 'plugin')
+
+block scripts
+  +script('chartjs_demo.js', 'page')
+
+block content
+    .row
+      .col-md-6
+        +panel('Line Chart')
+          div: canvas#line_chart(style='height:200px')
+      .col-md-6
+        +panel('Bar Chart')
+          div: canvas#bar_chart(style='height:200px')
+    .row
+      .col-md-6
+        +panel('Radar Chart')
+          div: canvas#radar_chart(style='height:200px')
+      .col-md-6
+        +panel('Doughnut Chart')
+          div: canvas#doughnut_chart(style='height:200px')

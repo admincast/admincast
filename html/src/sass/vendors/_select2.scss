@@ -1,0 +1,22 @@
+// Select 2
+
+.select2-container {
+	max-width: 100%;
+}
+.select2-container--default .select2-selection--multiple, 
+.select2-container--default .select2-selection--single,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+	outline: 0!important;
+	border-radius: 2px;
+	border: 1px solid rgba(0,0,0,.15);
+	height: auto;
+}
+.select2-dropdown {
+    border: 1px solid rgba(0,0,0,.15);
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: 30px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+	line-height: 1.25;
+}

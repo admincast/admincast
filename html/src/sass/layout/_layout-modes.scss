@@ -1,0 +1,47 @@
+body {
+
+    // Fixed navbar
+    /////////////////
+
+    &.fixed-navbar, &.fixed-layout {
+		.header {
+		    position: fixed;
+		    left: 0;
+		    right: 0;
+		    top: 0;
+		    z-index: 1002;
+		}
+		.content-wrapper {
+			padding-top: 56px;
+		}
+	}
+
+	// Fixed layout
+    /////////////////
+    
+	&.fixed-layout {
+		.page-sidebar {
+		    position: fixed;
+		    top: 56px;
+		    bottom: 0;
+		    margin-top: 0;
+		    padding-bottom: 100px;
+		}
+	}
+
+
+    // Boxed layout
+    /////////////////
+
+	&.boxed-layout {
+	    max-width: 1200px;
+	    margin: 0 auto;
+	    &.fixed-navbar, &.fixed-layout {
+	        .header {
+	            max-width: 1200px;
+	            margin: 0 auto;
+	        }
+	    }
+	}
+
+}

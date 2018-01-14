@@ -1,0 +1,46 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Panels'
+  - var pageUrl = 'panels.html'
+  - var page_heading = 'Panels'
+  - var path = ['Panels']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='Simple collapsed panel', tools={'collapse':1, 'menu':1})
+        +lipsum(100,'words')
+    .col-md-6
+      +panel(title='Fullscreen option', tools={'collapse':1, 'expend':1})
+        +lipsum(100,'words')
+  .row
+    .col-md-6
+      +panel(title='Height with scroll', tools={'collapse':1, 'expend':1})
+        p add <code>.scroller</code> and set height in <code>data-height</code> attribute.
+        .scroller(data-height="200px")
+          +lipsum(150,'words')
+    .col-md-6
+      +panel(title='Removable panel', tools={'collapse':1, 'remove':1,})
+        +lipsum(110,'words')
+  .row
+    .col-md-6
+      +panel(title='Simple collapsed panel', tools={'collapse':1, 'remove':1}, boxClass='ibox-success')
+        +lipsum(100,'words')
+    .col-md-6
+      +panel(title='Fullscreen option', tools={'collapse':1, 'menu':1}, boxClass='ibox-primary')
+        +lipsum(100,'words')
+  .row
+    .col-md-6
+      +panel(title='Simple collapsed panel', tools={'collapse':1, 'remove':1}, boxClass='ibox-info')
+        +lipsum(100,'words')
+    .col-md-6
+      +panel(title='Fullscreen option', tools={'collapse':1, 'menu':1}, boxClass='ibox-warning')
+        +lipsum(100,'words')
+  .row
+    .col-md-6
+      +panel(title='Simple collapsed panel', tools={'collapse':1, 'remove':1}, boxClass='ibox-danger')
+        +lipsum(100,'words')
+    .col-md-6
+      +panel(title='Fullscreen option', tools={'collapse':1, 'menu':1}, boxClass='ibox-grey')
+        +lipsum(100,'words')

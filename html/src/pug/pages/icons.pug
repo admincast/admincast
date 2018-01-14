@@ -1,0 +1,71 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Icons'
+  - var pageUrl = 'icons.html'
+  - var page_heading = 'Icons'
+  - var path = ['Icons']
+
+block content
+  +panel()
+    .row
+      .col-md-4
+        .card.m-t-20.m-b-20
+          .card-body
+              h5.card-title.text-center FontAwesome Icons v4.7.0
+              .icons-preview
+                .icon-item
+                  i.fa.fa-bar-chart
+                .icon-item
+                  i.fa.fa-calendar
+                .icon-item
+                  i.fa.fa-envelope-open-o
+                .icon-item
+                  i.fa.fa-heart-o
+                .icon-item
+                  i.fa.fa-bars
+                .icon-item
+                  i.fa.fa-search
+                .icon-item
+                  i.fa.fa-bullhorn
+                .icon-item
+                  i.fa.fa-file-text-o
+                .icon-item
+                  i.fa.fa-bell-o
+              .text-center.m-t-10: a(href='http://fontawesome.io/icons' target='_blank').btn.btn-sm.btn-info View all
+      .col-md-4
+        .card.m-t-20.m-b-20
+          .card-body
+              h5.card-title.text-center Themify Icons
+              .icons-preview
+                .icon-item
+                  i.ti-shopping-cart
+                .icon-item
+                  i.ti-paint-roller
+                .icon-item
+                  i.ti-lock
+                .icon-item
+                  i.ti-user
+                .icon-item
+                  i.ti-comment-alt
+                .icon-item
+                  i.ti-stats-up
+                .icon-item
+                  i.ti-menu
+                .icon-item
+                  i.ti-server
+                .icon-item
+                  i.ti-paint-bucket
+              .text-center.m-t-10: a(href='https://themify.me/themify-icons' target='_blank').btn.btn-sm.btn-info View all
+
+  style.
+    .icons-preview {display:flex; flex-wrap:wrap}
+    .icons-preview > .icon-item {
+      height: 50px;
+      line-height: 50px;
+      width: 80px;
+      font-size: 30px;
+      background-color: #ebedee;
+      margin: 5px;
+      text-align: center;
+    }

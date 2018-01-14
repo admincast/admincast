@@ -1,0 +1,151 @@
+.page-sidebar {
+    width: 220px;
+    min-height: 100%;
+	position: absolute;
+	top: 0;
+	margin-top:50px;
+	transition: all .2s ease-in-out;
+	z-index: 1001;
+	ul {
+	    padding: 0;
+	    margin: 0;
+	    list-style: none;
+	    li {
+	        position: relative;
+            display: block;
+            a {
+			    position: relative;
+			    display: block;
+			    padding: 11px 15px;
+			}
+	    }
+	}
+    .admin-block {
+    	padding:15px 10px;
+    	.admin-avatar {
+    		width: 45px;
+    	}
+    	.admin-info {
+    		padding-left: 1rem;
+    	}
+    }
+}
+
+.side-menu {
+	.heading {
+	    padding: 12px 15px;
+	    display: block;
+	    font-size: 13px;
+	}
+	li {
+	    outline: 0;
+		.sidebar-item-icon {
+			display: block !important;
+			float: left;
+			width: 30px;
+			line-height: 20px !important;
+			font-size: 16px;
+		}
+		.nav-label {
+		    display:block;
+		}
+		.arrow {
+			line-height: 18px;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			margin-top: -9px;
+			opacity: 1;
+		}
+		&.active > a > .arrow {
+            transform: rotate(-90deg);
+		}
+	}
+	& > li {
+	    a {
+			white-space: nowrap;
+			overflow: hidden;
+	    }
+	}
+	.nav-2-level > li > a {padding:7px 10px 7px 45px;}
+	.nav-3-level > li > a {padding:7px 10px 7px 55px;}
+}
+
+
+
+/*************************
+  MINI Sidebar
+************************/  
+
+
+
+body:not(.fixed-layout).sidebar-mini {
+    .content-wrapper {margin-left:60px}
+    .page-sidebar {width: 60px;}
+    .page-brand {width:60px}
+	.brand {display:none}
+    .brand-mini {display:block !important}
+	.side-menu {
+		li {
+			&.heading {
+			    display:none;
+			}    
+			.sidebar-item-icon {
+			    font-size: 18px;
+			    text-align: center;
+			}
+		    .arrow {
+		        display: none;
+		    }
+		    .nav-2-level {
+		        display: none;
+			    position: absolute;
+			    top: 43px;
+			    left: 60px;
+			    min-width: 200px;
+			    padding-left: 0;
+			    ul {
+			        padding-left: 0;
+			    }
+			    li a {
+			        padding-left: 20px;
+			    }
+		    }
+		    .nav-3-level > li > a {
+		        padding-left: 27px;
+		    }
+		}
+		& > li > a > .nav-label{
+		    display:none;
+		}
+		& > li:hover {
+		    & > a {
+				overflow: visible;
+				width: 260px;
+				& > .nav-label {
+				    display:block;
+				    padding-left: 50px;
+				}
+			}
+			.nav-2-level {
+				display: block;
+				height: auto !important;
+				opacity: 1;
+				visibility: visible
+			}
+		}
+
+	}
+    .admin-block {
+    	padding: 15px 12px;
+    	.admin-info {display: none}
+    }
+}
+
+body.fixed-layout.sidebar-mini {
+	.page-sidebar, .page-brand {
+	    margin-left: -220px;
+	    visibility: hidden;
+	}
+	.content-wrapper {margin-left:0}
+}

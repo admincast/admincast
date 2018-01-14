@@ -1,0 +1,63 @@
+.page-wrapper {
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.content-wrapper {
+    position: relative;
+    background-color: #f7f7f7;
+    background-color: #f2f2f2;
+    background-color: #f1f1f1;
+	margin-left: 220px;
+	padding: 0 15px 60px 15px;
+	transition: margin .2s ease-in-out;
+	min-height: 1200px;
+}
+
+.page-header {
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+
+.page-content {
+	padding-top: 20px;
+}
+
+
+// PAGE HEADING, TITLE
+// ===============
+
+.page-heading {
+	padding: 0 5px;
+	.page-title {
+		font-size: 26px;
+		margin: 20px 0 10px 0;
+	}
+	.breadcrumb {
+	    padding: 0;
+	    margin: 0;
+	    font-size: 13px;
+	    background-color: inherit;
+	    display: flex;
+	    align-items: center;
+	    li {
+	    	float: none;
+	    	color: #868e96;
+	        a {
+	            color: inherit;
+	        }
+	        & + li:before {
+	            content: '\002022';
+	            color: inherit;
+	        }
+	    }
+	}
+}
+
+body.empty-layout .theme-config, body.empty-layout .to-top{
+    display: none !important;
+}

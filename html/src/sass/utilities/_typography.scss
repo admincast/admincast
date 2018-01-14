@@ -1,0 +1,55 @@
+
+.font-13 {font-size: 13px}
+.font-14 {font-size: 14px}
+.font-15 {font-size: 15px}
+.font-16 {font-size: 16px}
+.font-17 {font-size: 17px}
+.font-18 {font-size: 18px}
+.font-20 {font-size: 20px}
+.font-26 {font-size: 26px}
+
+.font-light {font-weight: 300 !important}
+.font-normal {font-weight: 400 !important}
+.font-strong {font-weight: 600 !important}
+.font-bold {font-weight: 700 !important}
+
+.link-blue {
+    color: inherit;
+    &:hover, &:focus {
+	    color: $blue !important;
+	}
+}
+
+.link-green {
+    color: inherit;
+    &:hover, &:focus {
+	    color: $green !important;
+	}
+}
+
+.color-white {color: $white !important}
+.color-green {color: $green !important}
+.color-blue {color: $blue !important}
+.color-orange {color: $orange !important}
+.color-red {color: $red !important}
+.color-blue-light {color: $blue-light !important}
+.color-purple {color: $purple !important}
+.color-ebony {color: $ebony !important}
+.color-silver {color: $silver !important}
+.color-inherit {color: inherit !important}
+
+.text-primary {color: $blue !important}
+.text-success {color: $green !important}
+.text-info {color: $blue-light !important}
+.text-warning {color: $orange !important}
+.text-danger {color: $red !important}
+.text-muted {color: #999 !important}
+.text-white {color: #fff !important}
+
+a.text-primary:hover, a.text-primary:focus {color: darken($brand-primary, 5%) !important}
+a.text-info:hover, a.text-info:focus {color: darken($brand-info, 5%) !important}
+a.text-success:hover, a.text-success:focus {color: darken($brand-success, 5%) !important}
+a.text-warning:hover, a.text-warning:focus {color: darken($brand-warning, 5%) !important}
+a.text-danger:hover, a.text-danger:focus {color: darken($brand-danger, 5%) !important}
+
+.uppercase {text-transform: uppercase !important}

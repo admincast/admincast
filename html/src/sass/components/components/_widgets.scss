@@ -1,0 +1,120 @@
+
+/*
+*  SOCIAL WIDGETS
+*/
+
+.social-widget {
+	width: 100px;
+	display: inline-block;
+}
+.social-widget-header {
+	padding: 15px;
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+}
+.social-widget-count {
+	padding: 12px;
+	font-weight: 500;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+}
+.social-widget-facebook {
+	.social-widget-header { background-color: #3B5998 }
+	.social-widget-count { background-color: lighten(#3B5998, 5%) }
+}
+.social-widget-twitter {
+	.social-widget-header { background-color: #00ACED }
+	.social-widget-count { background-color: lighten(#00ACED, 5%) }
+}
+.social-widget-google {
+	.social-widget-header { background-color: #F86C6B }
+	.social-widget-count { background-color: lighten(#F86C6B, 5%) }
+}
+.social-widget-linkedin {
+	.social-widget-header { background-color: #4875b4 }
+	.social-widget-count { background-color: lighten(#4875b4, 5%) }
+}
+.social-widget-pinterest {
+	.social-widget-header { background-color: #EC488D }
+	.social-widget-count { background-color: lighten(#EC488D, 5%) }
+}
+.social-widget-vk {
+	.social-widget-header { background-color: #4B73A4 }
+	.social-widget-count { background-color: lighten(#4B73A4, 5%) }
+}
+
+/*
+* STAT WIDGET
+*/
+
+.widget-stat .ibox-body {
+    padding: 12px 15px;
+}
+.widget-stat-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    line-height: 100px;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(0,0,0,.1);
+}
+
+/*
+*
+*/
+
+.static-widget {
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	text-align: center;
+	padding: 15px;
+	i {
+	    display: inline-block;
+	    margin-bottom: 15px;
+	    font-size: 36px;
+	}
+}
+
+
+.widget-dark-progress {
+	background: rgba(0,0,0,0.1);
+	.progress-bar {background-color: #e9ecef}
+}
+.widget-dark-badge {background: rgba(0,0,0,.2)}
+
+
+
+/*
+* Tasks list
+*/
+
+.tasks-list {
+	.task-data {
+	    padding-left: 25px
+	}
+	.task-item .ui-checkbox input:checked ~ .task-title {
+	    text-decoration: line-through;
+	}
+}
+.task-actions {
+    display:none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+    & > a.dropdown-toggle {
+        color: #aaa;
+        height: 30px;
+	    width: 30px;
+	    display: inline-block;
+	    line-height: 30px;
+	    text-align: center;
+    }
+}
+.task-item:hover .task-actions {display:block}

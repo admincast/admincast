@@ -1,0 +1,110 @@
+{
+    "menu" : [
+        {
+            "name": "Dashboard",
+            "icon": "fa fa-th-large",
+            "url": "index.html"
+        },
+        {"header":true, "name":"FEATURES"},
+        {
+            "name": "Basic UI",
+            "icon": "fa fa-bookmark",
+            "childrens": [
+                {"name":"Colors", "url":"colors.html"},
+                {"name":"Typography", "url":"typography.html"},
+                {"name":"Panels", "url":"panels.html"},
+                {"name":"Buttons", "url":"buttons.html"},
+                {"name":"Tabs", "url":"tabs.html"},
+                {"name":"Alerts & Tooltips", "url":"alerts_tooltips.html"},
+                {"name":"Badges & Progress", "url":"badges_progress.html"},
+                {"name":"List", "url":"lists.html"},
+                {"name":"Card", "url":"cards.html"}
+            ]
+        },
+        {
+            "name": "Forms",
+            "icon": "fa fa-edit",
+            "childrens": [
+                {"name":"Basic Forms", "url":"form_basic.html"},
+                {"name":"Advanced Plugins", "url":"form_advanced.html"},
+                {"name":"Form input masks", "url":"form_masks.html"},
+                {"name":"Form Validation", "url":"form_validation.html"},
+                {"name":"Text Editors", "url":"text_editors.html"}
+            ]
+        },
+        {
+            "name": "Tables",
+            "icon": "fa fa-table",
+            "childrens": [
+                {"name":"Basic Tables", "url":"table_basic.html"},
+                {"name":"Datatables", "url":"datatables.html"}
+            ]
+        },
+        {
+            "name": "Charts",
+            "icon": "fa fa-bar-chart",
+            "childrens": [
+                {"name":"Flot Charts", "url":"charts_flot.html"},
+                {"name":"Morris Charts", "url":"charts_morris.html"},
+                {"name":"Chart.js", "url":"chartjs.html"},
+                {"name":"Sparkline Charts", "url":"charts_sparkline.html"}
+            ]
+        },
+        {
+            "name": "Maps",
+            "icon": "fa fa-map",
+            "childrens": [
+                {"name":"Vector maps", "url":"maps_vector.html"}
+            ]
+        },
+        {
+            "name": "Icons",
+            "url": "icons.html",
+            "icon": "fa fa-smile-o"
+        },
+        {"header":true, "name":"PAGES"},
+        {
+            "name": "Mailbox",
+            "icon": "fa fa-envelope",
+            "childrens": [
+                {"name":"Inbox", "url":"mailbox.html"},
+                {"name":"Mail view", "url":"mail_view.html"},
+                {"name":"Compose mail", "url":"mail_compose.html"}
+            ]
+        },
+        {
+            "name": "Calendar",
+            "url": "calendar.html",
+            "icon": "fa fa-calendar"
+        },
+        {
+            "name": "Pages",
+            "icon": "fa fa-file-text",
+            "childrens": [
+                {"name":"Invoice", "url":"invoice.html"},
+                {"name":"Profile", "url":"profile.html"},
+                {"name":"Login", "url":"login.html"},
+                {"name":"Register", "url":"register.html"},
+                {"name":"Lockscreen", "url":"lockscreen.html"},
+                {"name":"Forgot password", "url":"forgot_password.html"},
+                {"name":"404 error", "url":"error_404.html"},
+                {"name":"500 error", "url":"error_500.html"}
+            ]
+        },
+        {
+            "name": "Menu Levels",
+            "icon": "fa fa-sitemap",
+            "childrens": [
+                {"name":"Level 2", "url":"javascript:;"},
+                {
+                    "name":"Level 2", 
+                    "url":"",
+                    "childrens": [
+                        {"name": "Level 3", "url": "javascript:;"},
+                        {"name": "Level 3", "url": "javascript:;"}
+                    ]
+                }
+            ]
+        }
+    ]
+}

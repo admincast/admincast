@@ -1,0 +1,31 @@
+
+.modal-dialog {
+    z-index: 1100;
+    .modal-content {
+        border: 0;
+        border-radius: 0;
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,.14), 0 4px 5px 0 rgba(0,0,0,.098), 0 1px 10px 0 rgba(0,0,0,.084);
+    }
+}
+.modal-header .close {
+    margin:0; 
+    font-size:0;
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    opacity: .5;
+    cursor: pointer;
+    &::before {
+        content: "\e646";
+        font-size: 16px;
+    }
+    &:hover {
+        opacity: .75;
+    }
+    span {
+        display: none;
+    }
+}

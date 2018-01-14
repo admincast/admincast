@@ -1,0 +1,42 @@
+
+.table {
+    &>tbody>tr>th, &>tbody>tr>td,
+    &>tfoot>tr>th, &>tfoot>tr>td {
+        border-top: 1px solid $table-border-color;
+    }
+	thead th {
+	    border-bottom: 1px solid #ddd !important;
+	    border-top: 0;
+	    font-weight: 700;
+	}
+	&.no-border {
+	    & > tbody > tr > td, & > thead > tr > th {border: 0 none !important}
+	}
+}
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+	border: 1px solid $table-border-color;
+}
+
+// Striped and hover version
+//
+
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: rgba(0,0,0,.04);
+}
+.table-hover tbody tr:hover {
+	background-color: rgba(0,0,0,.05);
+}
+
+
+// Contextual classes
+//////////////////////
+
+.table tr.success > td {background-color: $success-row-bg !important}
+.table tr.info > td {background-color: $info-row-bg !important}
+.table tr.warning > td {background-color: $warning-row-bg !important}
+.table tr.danger > td {background-color: $danger-row-bg !important}

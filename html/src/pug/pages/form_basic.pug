@@ -1,0 +1,407 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Form'
+  - var pageUrl = 'form_basic.html'
+  - var page_heading = 'Basic Form'
+  - var path = ['Basic Form']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='Basic form', tools={'collapse':1, 'menu':1})
+        form
+          .row
+            .col-sm-6.form-group
+              label First Name
+              input.form-control(type='text', placeholder='First Name')
+            .col-sm-6.form-group
+              label Last Name
+              input.form-control(type='text', placeholder='First Name')
+          .form-group
+            label Email
+            input.form-control(type='text', placeholder='Email address')
+          .form-group
+            label Password
+            input.form-control(type='password', placeholder='Password')
+          .form-group
+            label.ui-checkbox
+              input(type='checkbox')
+              span.input-span
+              | Remamber me
+          .form-group
+            button.btn.btn-default(type='submit') Submit
+    .col-md-6
+      +panel(title='Horizontal Form', tools={'collapse':1, 'expend':1})
+        form.form-horizontal
+            .form-group.row
+                label.col-sm-2.col-form-label Email
+                .col-sm-10
+                    input.form-control(type='text', placeholder='Email address')
+            .form-group.row
+                label.col-sm-2.col-form-label Password
+                .col-sm-10
+                    input.form-control(type='password', placeholder='Password')
+            .form-group.row
+                label.col-sm-2.col-form-label Gender
+                .col-sm-10
+                    input.form-control(type='password', placeholder='Password')
+            .form-group.row
+                .col-sm-10.ml-sm-auto
+                    label.ui-checkbox.ui-checkbox-gray
+                        input(type='checkbox')
+                        span.input-span
+                        | Remamber me
+            .form-group.row
+                .col-sm-10.ml-sm-auto
+                    button.btn.btn-info(type='submit') Submit
+  +panel(title='Inline Form')
+    form.form-inline
+        label.sr-only(for='ex-email') Email
+        input#ex-email.form-control.mb-2.mr-sm-2.mb-sm-0(type='text', placeholder='Email address')
+        label.sr-only(for='ex-pass') Email
+        input#ex-pass.form-control.mb-2.mr-sm-2.mb-sm-0(type='password', placeholder='Password')
+        .form-check.mb-2.mr-sm-2.mb-sm-0
+          label.ui-checkbox.ui-checkbox-inline
+            input(type='checkbox')
+            span.input-span
+            | Remamber me
+        button.btn.btn-success(type='submit') Login
+  .row
+    .col-md-6
+      +panel(title='Form Elements', tools={'collapse':1, 'expend':1})
+        form
+            .form-group
+                label Default input
+                input.form-control(type='text', placeholder='Default input')
+            .form-group
+                label Rounded input
+                input.form-control.input-rounded(type='text', placeholder='Rounded input')
+            .form-group
+                label With Help text
+                input.form-control(type='text', placeholder='With Help text')
+                span.help-block This is some placeholder block-level help text for the above input.
+            h4 Input Groups
+            .form-group
+                .input-group
+                    .input-group-addon
+                        i.fa.fa-envelope
+                    input.form-control(type='text', placeholder='input group')
+            .form-group
+                .input-group
+                    input.form-control(type='text', placeholder='input group')
+                    .input-group-addon @example.com
+            .form-group
+                .input-group
+                    .input-group-addon.bg-white $
+                    input.form-control(type='text', placeholder='input group')
+                    .input-group-addon.bg-white .00
+            .form-group
+                .input-group
+                    .input-group-addon
+                        i.fa.fa-lock.font-16
+                    input.form-control(type='text', placeholder='input group')
+            .form-group
+                .input-group
+                    .input-group-addon
+                        i.fa.fa-user
+                    input.form-control(type='text', placeholder='input group')
+            .form-group
+                .input-group
+                    input.form-control(type='text', placeholder='input group')
+                    .input-group-addon
+                        i.fa.fa-link
+            .form-group
+                .input-group
+                    .input-group-addon
+                        input(type='checkbox')
+                    input.form-control(type='text', placeholder='input group')
+            .form-group
+                .input-group
+                    .input-group-addon
+                        input(type='radio')
+                    input.form-control(type='text', placeholder='input group')
+            h4 Input Button Groups
+            .form-group
+                .input-group
+                    .input-group-btn
+                        button.btn.btn-info(type='button') Go!
+                    input.form-control(type='text', placeholder='input group')
+            .form-group
+                .input-group
+                    input.form-control(type='text', placeholder='input group')
+                    .input-group-btn
+                        button.btn.btn-primary(type='button') Go!
+            .form-group
+                .input-group
+                    .input-group-btn
+                        button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+                            | Action 
+                            i.fa.fa-angle-down
+                        ul.dropdown-menu
+                            a.dropdown-item option 1
+                            a.dropdown-item option 2
+                    input.form-control(type='text', placeholder='input group')
+            .form-group
+                .input-group
+                    input.form-control(type='text', placeholder='input group')
+                    .input-group-btn
+                        button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+                            | Action 
+                            i.fa.fa-angle-down
+                        ul.dropdown-menu
+                            a.dropdown-item option 1
+                            a.dropdown-item option 2
+            .form-group
+                .input-group
+                    input.form-control(type='text', placeholder='input group')
+                    .input-group-btn
+                        button.btn.btn-info(type='button') Action
+                        button.btn.btn-info.dropdown-toggle(type='button', data-toggle='dropdown')
+                            i.fa.fa-angle-down
+                        ul.dropdown-menu
+                            a.dropdown-item option 1
+                            a.dropdown-item option 2
+            h4 With Icons
+            .form-group
+                .input-group-icon
+                    .input-icon
+                        i.fa.fa-link
+                    input.form-control(type='text', placeholder='with icon')
+            .form-group
+                .input-group-icon
+                    .input-icon
+                        i.fa.fa-keyboard-o
+                    input.form-control(type='text', placeholder='with icon')
+            .form-group
+                .input-group-icon
+                    .input-icon
+                        i.fa.fa-microphone.text-primary.font-15
+                    input.form-control(type='text', placeholder='with icon')
+            .form-group
+                .input-group-icon.right
+                    .input-icon
+                        i.fa.fa-eye
+                    input.form-control(type='text', placeholder='with icon')
+            .form-group
+                .input-group-icon.right
+                    .input-icon
+                        i.fa.fa-lock.font-16
+                    input.form-control(type='text', placeholder='with icon')
+            .form-group
+                .input-group-icon.right
+                    .input-icon
+                        i.fa.fa-check.text-success
+                    input.form-control(type='text', placeholder='with icon')
+            .form-group
+                .input-group-icon.right
+                    .input-icon
+                        i.icon-cancel.text-danger
+                    input.form-control(type='text', placeholder='with icon')
+            .form-group
+                label Disabled
+                input.form-control(type='text', placeholder='Disabled input', disabled='')
+            .form-group
+                label Static control
+                p.form-control-static email@example.com
+            .form-group
+                label Select
+                select.form-control
+                    option(value='') option 1
+                    option(value='') option 2
+                    option(value='') option 3
+            .form-group
+                label Multiple Select
+                select.form-control(multiple='')
+                    option(value='') option 1
+                    option(value='') option 2
+                    option(value='') option 3
+                    option(value='') option 4
+                    option(value='') option 5
+            .form-group
+                label textarea
+                textarea.form-control(rows='3')
+            .form-group
+                label Checkboxes & Radios
+                .row
+                    .col-6.m-b-20
+                        .check-list
+                            label.ui-checkbox
+                                input(type='checkbox')
+                                span.input-span
+                                | Checkbox
+                            label.ui-checkbox
+                                input(type='checkbox')
+                                span.input-span
+                                | Checkbox
+                            label.ui-checkbox
+                                input(type='checkbox', checked='')
+                                span.input-span
+                                | Checked
+                            label.ui-checkbox.ui-checkbox-gray
+                                input(type='checkbox')
+                                span.input-span
+                                | Checkbox gray
+                            label.ui-checkbox.disabled
+                                input(type='checkbox', disabled='')
+                                span.input-span
+                                | Disabled
+                    .col-6.m-b-20
+                        .check-list
+                            label.ui-checkbox.ui-checkbox-primary
+                                input(type='checkbox')
+                                span.input-span
+                                | Primary
+                            label.ui-checkbox.ui-checkbox-success
+                                input(type='checkbox')
+                                span.input-span
+                                | Success
+                            label.ui-checkbox.ui-checkbox-info
+                                input(type='checkbox')
+                                span.input-span
+                                | Info
+                            label.ui-checkbox.ui-checkbox-warning
+                                input(type='checkbox')
+                                span.input-span
+                                | Warning
+                            label.ui-checkbox.ui-checkbox-danger
+                                input(type='checkbox')
+                                span.input-span
+                                | Danger
+                .row
+                    .col-6.m-b-20
+                        .check-list
+                            label.ui-radio
+                                input(type='radio', name='test')
+                                span.input-span
+                                | Radio
+                            label.ui-radio
+                                input(type='radio', name='test')
+                                span.input-span
+                                | Radio
+                            label.ui-radio
+                                input(type='radio', name='test', checked='')
+                                span.input-span
+                                | Checked
+                            label.ui-radio.ui-radio-gray
+                                input(type='radio', name='test')
+                                span.input-span
+                                | Radio Gray
+                            label.ui-radio.disabled
+                                input(type='radio', name='test', disabled='')
+                                span.input-span
+                                | Disabled
+                    .col-6.m-b-20
+                        .check-list
+                            label.ui-radio.ui-radio-primary
+                                input(type='radio', name='test2')
+                                span.input-span
+                                | Primary
+                            label.ui-radio.ui-radio-success
+                                input(type='radio', name='test2')
+                                span.input-span
+                                | Success
+                            label.ui-radio.ui-radio-info
+                                input(type='radio', name='test2')
+                                span.input-span
+                                | Info
+                            label.ui-radio.ui-radio-warning
+                                input(type='radio', name='test2')
+                                span.input-span
+                                | Warning
+                            label.ui-radio.ui-radio-danger
+                                input(type='radio', name='test2')
+                                span.input-span
+                                | Danger
+            .form-group
+                label Inline Checkboxes
+                div.m-b-10
+                    label.ui-checkbox.ui-checkbox-inline
+                        input(type='checkbox')
+                        span.input-span
+                        | Option 1
+                    label.ui-checkbox.ui-checkbox-inline
+                        input(type='checkbox')
+                        span.input-span
+                        | Option 2
+                    label.ui-checkbox.ui-checkbox-inline
+                        input(type='checkbox')
+                        span.input-span
+                        | Option 3
+                div
+                    label.ui-radio.ui-radio-inline
+                        input(type='radio', name='test')
+                        span.input-span
+                        | Option 1
+                    label.ui-radio.ui-radio-inline
+                        input(type='radio', name='test')
+                        span.input-span
+                        | Option 2
+                    label.ui-radio.ui-radio-inline
+                        input(type='radio', name='test')
+                        span.input-span
+                        | Option 3
+    .col-md-6  
+      +panel(title='Form Elements', tools={'collapse':1, 'expend':1})
+        h4 Control sizing
+        .form-group
+            input.form-control.input-sm(type='text', placeholder='Small')
+        .form-group
+            input.form-control(type='text', placeholder='Default')
+        .form-group
+            input.form-control.input-lg(type='text', placeholder='Big')
+        .form-group
+            .input-group.input-group-sm
+                .input-group-addon
+                    i.fa.fa-envelope
+                input.form-control(type='text', placeholder='small input group')
+        .form-group
+            .input-group.input-group-lg
+                .input-group-addon
+                    i.fa.fa-link
+                input.form-control(type='text', placeholder='large input group')
+        .form-group
+            select.form-control.input-sm
+                option Small select
+        .form-group
+            select.form-control
+                option Default select
+        .form-group
+            select.form-control.input-lg
+                option Big select
+        .form-group.has-success
+            label.col-form-label Input success state
+            input.form-control(type='text', placeholderx='Rounded input')
+        .form-group.has-warning
+            label.col-form-label Input warning state
+            input.form-control(type='text', placeholderx='Rounded input')
+        .form-group.has-error
+            label.col-form-label Input error state
+            input.form-control(type='text', placeholderx='Rounded input')
+        h4 With icons
+        div
+            .form-group
+                label.col-form-label Default input
+                .input-group-icon.right
+                    .input-icon
+                        i.fa.fa-info-circle
+                    input.form-control(type='text')
+            .form-group.has-success
+                label.col-form-label Input success state
+                .input-group-icon.right
+                    .input-icon
+                        i.fa.fa-check
+                    input.form-control(type='text')
+            .form-group.has-warning
+                label.col-form-label Input warning state
+                .input-group-icon.right
+                    .input-icon
+                        i.fa.fa-warning
+                    input.form-control(type='text')
+            .form-group.has-error
+                label.col-form-label Input error state
+                .input-group-icon.right
+                    .input-icon
+                        i.fa.fa-exclamation
+                    input.form-control(type='text')
+

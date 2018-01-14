@@ -1,0 +1,47 @@
+li.dropdown.dropdown-inbox
+  a.nav-link(data-toggle='dropdown').dropdown-toggle
+    i.fa.fa-envelope-o
+    span.badge.badge-primary.envelope-badge 9
+  ul.dropdown-menu.dropdown-menu-right.dropdown-menu-media
+    li.dropdown-menu-header
+      div
+        span <strong>9 New</strong> Messages
+        a(href='mailbox.html').pull-right view all
+    li(data-height='240px' data-color="#71808f").list-group.list-group-divider.scroller
+      div
+        a.list-group-item
+          div.media
+            div.media-img
+              +img('users/u1.jpg')
+            div.media-body
+              div.font-strong 
+              | Jeanne Gonzalez
+              small.text-muted.float-right Just now
+              div.font-13 Your proposal interested me.
+        a.list-group-item
+          div.media
+            div.media-img
+              +img('users/u2.jpg')
+            div.media-body
+              div.font-strong
+              | Becky Brooks
+              small.text-muted.float-right 18 mins
+              div.font-13 Lorem Ipsum is simply.
+        a.list-group-item
+          div.media
+            div.media-img
+              +img('users/u3.jpg')
+            div.media-body
+              div.font-strong
+              | Frank Cruz
+              small.text-muted.float-right 18 mins
+              div.font-13 Lorem Ipsum is simply.
+        a.list-group-item
+          div.media
+            div.media-img
+              +img('users/u4.jpg')
+            div.media-body
+              div.font-strong
+              | Rose Pearson
+              small.text-muted.float-right 3 hrs
+              div.font-13 Lorem Ipsum is simply.

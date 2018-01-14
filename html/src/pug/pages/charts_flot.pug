@@ -1,0 +1,42 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Flot Charts'
+  - var pageUrl = 'charts_flot.html'
+  - var page_heading = 'Flot Charts'
+  - var path = ['Flot Charts']
+
+block plugins
+  +script('Flot/jquery.flot.js', 'plugin')
+  +script('Flot/jquery.flot.resize.js', 'plugin')
+  +script('Flot/jquery.flot.pie.js', 'plugin')
+  +script('Flot/jquery.flot.time.js', 'plugin')
+  +script('flot.tooltip/js/jquery.flot.tooltip.min.js', 'plugin')
+  +script('Flot/jquery.flot.categories.js', 'plugin')
+  +script('Flot/jquery.flot.stack.js', 'plugin')
+  +script('Flot/jquery.flot.selection.js', 'plugin')
+  +script('flot-orderBars/js/jquery.flot.orderBars.js', 'plugin')
+
+block scripts
+  +script('charts_flot_demo.js', 'page')
+
+block content
+    .row
+      .col-md-6
+        +panel('Simple Bar Chart')
+          #flot_bar_chart(style='height:280px;')
+      .col-md-6
+        +panel('Interactivity Chart')
+          #flot_interactivity(style='height:280px;')
+    .row
+      .col-md-6
+        +panel('Pie Chart')
+          #flot_pie_chart(style='height:280px;')
+      .col-md-6
+        +panel('Area Chart')
+          #flot_area_chart(style='height:280px;')
+    +panel('Visitors Example')
+        #flot_visitors.chart(style='height:280px;')
+        #flot_visitors_overview.chart(style='height:100px;')
+    +panel('Multiple lines')
+      #flot_multi_line(style='height:280px;')

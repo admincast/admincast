@@ -1,0 +1,91 @@
+include ../config.pug
+include ../vars.pug
+include ../mixins.pug
+
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width initial-scale=1.0")
+    title #{titlePrefix} | Register
+    // GLOBAL MAINLY STYLES
+    +link('bootstrap/dist/css/bootstrap.min.css', 'plugin')
+    +link('font-awesome/css/font-awesome.min.css', 'plugin')
+    +link('themify-icons/css/themify-icons.css', 'plugin')
+    // THEME STYLES
+    +link('assets/css/main.css')
+    // PAGE LEVEL STYLES
+    +link('auth-light.css', 'page')
+  body.bg-silver-300
+    .content
+        .brand: a.link(href='index.html') AdminCAST
+        form#register-form(action='javascript:;', method='post')
+            h2.login-title Sign Up
+            .row
+                .col-6
+                    .form-group
+                        input.form-control(type='text', name='first_name', placeholder='First Name')
+                .col-6
+                    .form-group
+                        input.form-control(type='text', name='last_name', placeholder='Last Name')
+            .form-group
+                input.form-control(type='email', name='email', placeholder='Email', autocomplete='off')
+            .form-group
+                input#password.form-control(type='password', name='password', placeholder='Password')
+            .form-group
+                input.form-control(type='password', name='password_confirmation', placeholder='Confirm Password')
+            .form-group.text-left
+                label.ui-checkbox.ui-checkbox-info
+                    input(type='checkbox', name='agree')
+                    span.input-span
+                    | I agree the terms and policy
+            .form-group
+                button.btn.btn-info.btn-block(type='submit') Sign up
+            .social-auth-hr
+                span Or Sign up with
+            .text-center.social-auth.m-b-20
+                a.btn.btn-social-icon.btn-twitter.m-r-5(href='javascript:;')
+                    i.fa.fa-twitter
+                a.btn.btn-social-icon.btn-facebook.m-r-5(href='javascript:;')
+                    i.fa.fa-facebook
+                a.btn.btn-social-icon.btn-google.m-r-5(href='javascript:;')
+                    i.fa.fa-google-plus
+                a.btn.btn-social-icon.btn-linkedin.m-r-5(href='javascript:;')
+                    i.fa.fa-linkedin
+                a.btn.btn-social-icon.btn-vk(href='javascript:;')
+                    i.fa.fa-vk
+            .text-center
+                | Already a member?
+                a.color-blue(href='login.html') Login here
+
+    // BEGIN PAGA BACKDROPS
+    div.sidenav-backdrop.backdrop
+    div.preloader-backdrop
+      div.page-preloader Loading
+    // END PAGA BACKDROPS
+
+    <!-- CORE PLUGINS -->
+    +script('jquery/dist/jquery.min.js', 'plugin')
+    +script('popper.js/dist/umd/popper.min.js', 'plugin')
+    +script('bootstrap/dist/js/bootstrap.min.js', 'plugin')
+    <!-- PAGE LEVEL PLUGINS -->
+    +script('jquery-validation/dist/jquery.validate.min.js', 'plugin')
+    // CORE SCRIPTS
+    +script('assets/js/app.js')
+    // PAGE LEVEL SCRIPTS
+    script(type='text/javascript').
+      $(function(){
+        $('#register-form').validate({
+            errorClass:"help-block",
+            rules: {
+                first_name: {required:true,minlength:2},
+                last_name: {required:true,minlength:2},
+                email: {required:true,email:true},
+                password: {required:true,confirmed:true},
+                password_confirmation: {equalTo:password}
+            },
+            highlight:function(e){$(e).closest(".form-group").addClass("has-error")},
+            unhighlight:function(e){$(e).closest(".form-group").removeClass("has-error")},
+        });
+      });

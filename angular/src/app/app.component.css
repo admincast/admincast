@@ -1,0 +1,7 @@
+.preloader-backdrop {
+    background-color: transparent;
+}
+.page-preloader {
+    background-color: #fff;
+    box-shadow: 0 5px 20px #d6dee4;
+}

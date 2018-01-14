@@ -1,0 +1,157 @@
+//
+//** Global Config
+// ======================
+
+
+//== COLORS
+
+$white:           #fff;
+$black:           #000;
+
+//$blue-dark:       #3498DB;
+$blue:            #3498db;
+$blue-light:      #23B7E5;
+$green:           #2ecc71;
+$red:             #e74c3c;
+$orange:          #F39C12;
+$silver:          #bdc3c7;
+$ebony:           #34495f;
+$purple:          #7E57C2;
+$teal:            #1abc9c;
+$grey:            #7f8c8d;
+$yellow:          #f1c40f;
+$pink:            #E91E63;
+
+
+//== SEMANTIC COLORS
+
+$brand-primary:             $blue;
+$brand-success:             $green;
+$brand-info:                $blue-light;
+$brand-warning:             $orange;
+$brand-danger:              $red;
+$brand-default:             $silver;
+
+
+// COLORS PALLETES
+//
+// The colors for which the palette will be created
+
+$scotch-colors: (
+    'blue': $blue,
+    'blue-light': $blue-light,
+    'green': $green,
+    //'blue-dark': $blue-dark,
+    'orange': $orange,
+    'red': $red,
+    'silver': $silver,
+    'ebony': $ebony,
+    'purple': $purple,
+    'grey':  $grey,
+    'teal':  $teal,
+    'yellow': $yellow,
+    'pink': $pink,
+);
+
+//== Body
+
+$body-bg:     #f1f1f1;
+$body-color:  #333;
+
+
+//== Links
+
+$link-color: $brand-primary;
+$link-hover-color: darken($link-color, 15%);
+
+
+//== BUTTONS
+
+$btn-primary-color:              $white !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             mix(black, $btn-primary-bg, 15%) !default;
+
+$btn-info-color:                 $white !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                mix(black, $btn-info-bg, 15%) !default;
+
+$btn-success-color:              $white !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             mix(black, $btn-success-bg, 15%) !default;
+
+$btn-warning-color:              $white !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             mix(black, $btn-warning-bg, 15%) !default;
+
+$btn-danger-color:               $white !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              mix(black, $btn-danger-bg, 15%) !default;
+
+$btn-default-color:              #485b6f; //#5d6064 !default;
+$btn-default-bg:                 mix(white, $silver, 58%) !default; //#E6E6E6
+$btn-default-border:             mix(black, $btn-default-bg, 15%) !default;
+
+//== Alerts
+
+$alert-success-bg:            mix(white, $brand-success, 50%) !default;
+$alert-success-text:          mix(black, $brand-success, 28%) !default;
+$alert-success-border:        mix(white, $brand-success, 20%) !default;
+
+$alert-info-bg:               mix(white, $brand-info, 50%) !default;
+$alert-info-text:             mix(black, $brand-info, 25%) !default;
+$alert-info-border:           mix(white, $brand-info, 20%) !default;
+
+$alert-warning-bg:            mix(white, $brand-warning, 50%) !default;
+$alert-warning-text:          mix(black, $brand-warning, 28%) !default;
+$alert-warning-border:        mix(white, $brand-warning, 20%) !default;
+
+$alert-danger-bg:             mix(white, $brand-danger, 50%) !default;
+$alert-danger-text:           mix(black, $brand-danger, 28%) !default;
+$alert-danger-border:         mix(white, $brand-danger, 20%) !default;
+
+//== Labels
+
+$label-default-bg:            mix(white, $silver, 58%) !default;
+$label-default-color:         $body-color !default;
+
+$label-primary-bg:            $brand-primary   !default;
+$label-success-bg:            $brand-success   !default;
+$label-info-bg:               $brand-info      !default;
+$label-warning-bg:            $brand-warning   !default;
+$label-danger-bg:             $brand-danger    !default;
+
+//== Badges
+
+$badge-default-bg:            mix(white, $silver, 58%) !default;
+$badge-default-color:         $body-color !default;
+
+$badge-primary-bg:            $brand-primary   !default;
+$badge-success-bg:            $brand-success   !default;
+$badge-info-bg:               $brand-info      !default;
+$badge-warning-bg:            $brand-warning   !default;
+$badge-danger-bg:             $brand-danger    !default;
+
+
+//== Table
+
+$table-border-color: #e8e8e8;
+
+$success-row-bg:    mix(white, $brand-success, 85%) !default;
+$info-row-bg:       mix(white, $brand-info, 85%) !default;
+$warning-row-bg:    mix(white, $brand-warning, 85%) !default;
+$danger-row-bg:     mix(white, $brand-danger, 85%) !default;
+
+//== Pagination
+
+$pagination-active-item-color: $brand-primary;
+
+//== Panels
+
+$ibox-tools-color: #aaa;
+$ibox-tools-hover-color: #6d7c85;
+
+//
+//** Layout Config
+// ======================
+
+//$navLinkColor: #6d7c85;

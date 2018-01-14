@@ -1,0 +1,35 @@
+
+.badge, .label {
+    padding: 3px 6px;
+    line-height: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.badge-pill, .label-pill {border-radius: 10px !important;}
+.badge-default, .label-default {background-color: $badge-default-bg; color: $badge-default-color}
+.badge-primary, .label-primary {background-color: $badge-primary-bg}
+.badge-success, .label-success {background-color: $badge-success-bg}
+.badge-info, .label-info {background-color: $badge-info-bg}
+.badge-warning, .label-warning {background-color: $badge-warning-bg}
+.badge-danger, .label-danger {background-color: $badge-danger-bg}
+
+.badge-circle, .label-circle {
+    height: 20px;
+    min-width: 20px;
+    line-height: 20px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.badge-big {
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 29px;
+    font-size: 15px;
+}

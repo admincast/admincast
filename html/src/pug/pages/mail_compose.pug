@@ -1,0 +1,101 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Compose mail'
+  - var pageUrl = 'mail_compose.html'
+  - var page_heading = 'Compose mail'
+  - var path = ['Compose mail']
+
+block plugins-styles
+    +link('summernote/dist/summernote.css', 'plugin')
+
+block plugins
+    +script('summernote/dist/summernote.min.js', 'plugin')
+
+block page_styles
+    +link('mailbox.css', 'page')
+
+block content
+  .row
+    .col-lg-3.col-md-4
+        a.btn.btn-info.btn-block(href='mail_compose.html')
+            i.fa.fa-edit
+            |  Compose
+        br
+        h6.m-t-10.m-b-10 FOLDERS
+        ul.list-group.list-group-divider.inbox-list
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-inbox
+                    |  Inbox (6) 
+                    span.badge.badge-warning.badge-square.pull-right 17
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-envelope-o
+                    |  Sent
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-star-o
+                    |  Important 
+                    span.badge.badge-success.badge-square.pull-right 2
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-file-text-o
+                    |  Drafts
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-trash-o
+                    |  Trash
+        h6.m-t-10.m-b-10 LABELS
+        ul.list-group.list-group-divider.inbox-list
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-success
+                    |  Support
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-warning
+                    |  Business
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-info
+                    |  Work
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-danger
+                    |  System
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-muted
+                    |  Social
+    .col-lg-9.col-md-8
+        #mailbox-container.ibox
+            .mailbox-header.d-flex.justify-content-between
+                h5.inbox-title Compose mail
+                .inbox-toolbar.m-l-20
+                    button.btn.btn-default.btn-sm(data-action='reply', data-toggle='tooltip', data-original-title='Reply')
+                        i.fa.fa-reply
+                    button.btn.btn-default.btn-sm(data-action='delete', data-toggle='tooltip', data-original-title='Delete')
+                        i.fa.fa-trash-o
+            .mailbox-body
+                form.form-horizontal(action='javascript:void(0)', method='POST', if='compose_form')
+                    .form-group.row
+                        label.col-sm-2.control-label To:
+                        .col-sm-10
+                            input.form-control(type='text', name='to', value='example@gmail.com')
+                    .form-group.row
+                        label.col-sm-2.control-label Subject:
+                        .col-sm-10
+                            input.form-control(type='text', name='subject')
+                    textarea#summernote(name='message')
+                        h4 Thank you for your attention
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur velit, corporis iste. Dolorem sapiente at, quibusdam fuga ea voluptatem iste. Cupiditate dignissimos, iure impedit, perferendis in beatae fuga voluptate, sapiente pariatur, libero ab odit. Placeat saepe sunt ipsam laboriosam temporibus nostrum ea optio, dolore soluta.
+                    input.btn.btn-info.m-t-20(type='submit')
+
+block scripts
+  script(type='text/javascript').
+    $(function(){
+        $('#summernote').summernote();
+        $('.note-popover').css({'display': 'none'});
+    })

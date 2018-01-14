@@ -1,0 +1,16 @@
+
+.pagination {
+
+    .page-link {
+        color: inherit;
+        &:hover, &:focus { color: $brand-primary }
+    }
+    .page-item.active .page-link,
+      // For support bootstrap 3 plugins
+    & .active > a, & .active > a:hover, & .active > a:focus,
+    & .active > span, & .active > span:hover, & .active > span:focus {
+        background-color: $pagination-active-item-color;
+        border-color:     $pagination-active-item-color;
+        color: #fff;
+    }
+}

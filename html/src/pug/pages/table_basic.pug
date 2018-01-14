@@ -1,0 +1,321 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Basic Tables'
+  - var pageUrl = 'table_basic.html'
+  - var page_heading = 'Basic Tables'
+  - var path = ['Basic Tables']
+
+block content
+  .row
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Basic Table
+        .ibox-body
+          table.table
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Bordered Table
+        .ibox-body
+          table.table.table-bordered
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+  .row
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Gray head
+        .ibox-body
+          table.table
+            thead.thead-default
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Gray head
+        .ibox-body
+          table.table.table-bordered
+            thead.thead-default
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+  .row
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Striped rows
+        .ibox-body
+          table.table.table-striped
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Hover rows
+        .ibox-body
+          table.table.table-hover
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+  
+  +panel('Responsive Table')
+    .table-responsive
+        table.table
+            thead
+                tr
+                    th(width='50px')
+                    th Product
+                    th Price
+                    th Data
+                    th Last Name
+                    th Actions
+            tbody
+                tr
+                    td
+                        label.ui-checkbox
+                            input(type='checkbox')
+                            span.input-span
+                    td iphone case
+                    td $1200
+                    td 33%
+                    td 02/08/2017
+                    td
+                        button.btn.btn-default.btn-xs.m-r-5(data-toggle='tooltip', data-original-title='Edit')
+                            i.fa.fa-pencil.font-14
+                        button.btn.btn-default.btn-xs(data-toggle='tooltip', data-original-title='Delete')
+                            i.fa.fa-trash.font-14
+                tr
+                    td
+                        label.ui-checkbox
+                            input(type='checkbox')
+                            span.input-span
+                    td Car covers
+                    td $3280
+                    td 42%
+                    td 08/10/2017
+                    td
+                        button.btn.btn-default.btn-xs.m-r-5(data-toggle='tooltip', data-original-title='Edit')
+                            i.fa.fa-pencil.font-14
+                        button.btn.btn-default.btn-xs(data-toggle='tooltip', data-original-title='Delete')
+                            i.fa.fa-trash.font-14
+                tr
+                    td
+                        label.ui-checkbox
+                            input(type='checkbox')
+                            span.input-span
+                    td Compressors
+                    td $7400
+                    td 56%
+                    td 14/11/2017
+                    td
+                        button.btn.btn-default.btn-xs.m-r-5(data-toggle='tooltip', data-original-title='Edit')
+                            i.fa.fa-pencil.font-14
+                        button.btn.btn-default.btn-xs(data-toggle='tooltip', data-original-title='Delete')
+                            i.fa.fa-trash.font-14
+  .row
+    .col-md-6
+      +panel('Contextual classes')
+        table.table.table-hover
+            caption Optional table caption.
+            thead
+                tr
+                    th #
+                    th First Name
+                    th Last Name
+                    th Date
+            tbody
+                tr.active
+                    td 1
+                    td Mark
+                    td Otto
+                    td 02/08/2017
+                tr
+                    td 2
+                    td Jacob
+                    td Thornton
+                    td 04/10/2017
+                tr.info
+                    td 3
+                    td Larry
+                    td the Bird
+                    td 08/11/2017
+                tr
+                    td 2
+                    td Jacob
+                    td Thornton
+                    td 04/10/2017
+                tr.success
+                    td 3
+                    td Larry
+                    td the Bird
+                    td 08/11/2017
+                tr
+                    td 2
+                    td Jacob
+                    td Thornton
+                    td 04/10/2017
+                tr.warning
+                    td 3
+                    td Larry
+                    td the Bird
+                    td 08/11/2017
+                tr
+                    td 2
+                    td Jacob
+                    td Thornton
+                    td 04/10/2017
+                tr.danger
+                    td 3
+                    td Larry
+                    td the Bird
+                    td 08/11/2017
+    .col-md-6
+      +panel('Condensed Table')
+        table.table.table-condensed
+            thead
+                tr
+                    th #
+                    th First Name
+                    th Last Name
+                    th Status
+            tbody
+                tr
+                    td 1
+                    td Mark
+                    td Otto
+                    td
+                        i.fa.fa-check.text-success
+                tr
+                    td 2
+                    td Jacob
+                    td Thornton
+                    td
+                        i.fa.fa-check.text-success
+                tr
+                    td 3
+                    td Larry
+                    td the Bird
+                    td
+                        i.fa.fa-warning.text-warning
+

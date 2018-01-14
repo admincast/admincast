@@ -1,0 +1,86 @@
+include ../config.pug
+include ../vars.pug
+include ../mixins.pug
+
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width initial-scale=1.0")
+    title #{titlePrefix} | Login
+    // GLOBAL MAINLY STYLES
+    +link('bootstrap/dist/css/bootstrap.min.css', 'plugin')
+    +link('font-awesome/css/font-awesome.min.css', 'plugin')
+    +link('themify-icons/css/themify-icons.css', 'plugin')
+    // THEME STYLES
+    +link('assets/css/main.css')
+    // PAGE LEVEL STYLES
+    +link('auth-light.css', 'page')
+  body.bg-silver-300
+    .content
+        .brand: a.link(href='index.html') AdminCAST
+        form#login-form(action='javascript:;', method='post')
+            h2.login-title Log in
+            .form-group
+              .input-group-icon.right
+                .input-icon
+                  i.fa.fa-envelope
+                input.form-control(type='email', name='email', placeholder='Email', autocomplete='off')
+            .form-group
+              .input-group-icon.right
+                .input-icon
+                  i.fa.fa-lock.font-16
+                input.form-control(type='password', name='password', placeholder='Password')
+            .form-group.d-flex.justify-content-between
+                label.ui-checkbox.ui-checkbox-info
+                    input(type='checkbox')
+                    span.input-span
+                    | Remember me
+                a(href='forgot_password.html') Forgot password?
+            .form-group
+                button.btn.btn-info.btn-block(type='submit') Login
+            .social-auth-hr
+                span Or login with
+            .text-center.social-auth.m-b-20
+                a.btn.btn-social-icon.btn-twitter.m-r-5(href='javascript:;')
+                    i.fa.fa-twitter
+                a.btn.btn-social-icon.btn-facebook.m-r-5(href='javascript:;')
+                    i.fa.fa-facebook
+                a.btn.btn-social-icon.btn-google.m-r-5(href='javascript:;')
+                    i.fa.fa-google-plus
+                a.btn.btn-social-icon.btn-linkedin.m-r-5(href='javascript:;')
+                    i.fa.fa-linkedin
+                a.btn.btn-social-icon.btn-vk(href='javascript:;')
+                    i.fa.fa-vk
+            .text-center
+                | Not a member? 
+                a.color-blue(href='register.html') Create accaunt
+    
+    // BEGIN PAGA BACKDROPS
+    div.sidenav-backdrop.backdrop
+    div.preloader-backdrop
+      div.page-preloader Loading
+    // END PAGA BACKDROPS
+
+    <!-- CORE PLUGINS -->
+    +script('jquery/dist/jquery.min.js', 'plugin')
+    +script('popper.js/dist/umd/popper.min.js', 'plugin')
+    +script('bootstrap/dist/js/bootstrap.min.js', 'plugin')
+    <!-- PAGE LEVEL PLUGINS -->
+    +script('jquery-validation/dist/jquery.validate.min.js', 'plugin')
+    // CORE SCRIPTS
+    +script('assets/js/app.js')
+    // PAGE LEVEL SCRIPTS
+    script(type='text/javascript').
+      $(function(){
+        $('#login-form').validate({
+            errorClass:"help-block",
+            rules: {
+                email: {required:true,email:true},
+                password: {required:true}
+            },
+            highlight:function(e){$(e).closest(".form-group").addClass("has-error")},
+            unhighlight:function(e){$(e).closest(".form-group").removeClass("has-error")},
+        });
+      });

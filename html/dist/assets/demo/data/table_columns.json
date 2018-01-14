@@ -1,0 +1,8 @@
+[
+  {"name":"id","title":"ID","breakpoints":"xs sm","type":"number","style":{"width":80,"maxWidth":80}},
+  {"name":"name","title":"name"},
+  {"name":"salary","title":"salary"},
+  {"name":"start_date","title":"start_date"},
+  {"name":"office","title":"office"},
+  {"name":"extn","title":"extn"}
+]

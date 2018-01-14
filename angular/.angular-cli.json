@@ -1,0 +1,115 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "my-app"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../node_modules/cd-themify-icons/index.css",
+        "../node_modules/animate.css/animate.min.css",
+        "../node_modules/toastr/build/toastr.min.css",
+        "../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css",
+        "../node_modules/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css",
+        "../node_modules/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css",
+        "../node_modules/datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4.min.css",
+        "../node_modules/jvectormap/jquery-jvectormap.css",
+        "../node_modules/summernote/dist/summernote.css",
+        "../node_modules/bootstrap-markdown/css/bootstrap-markdown.min.css",
+        "../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css",
+        "./assets/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css",
+        "../node_modules/morris.js/morris.css",
+        "../node_modules/fullcalendar/dist/fullcalendar.min.css",
+        "../node_modules/select2/dist/css/select2.min.css",
+        "../node_modules/jquery-minicolors/jquery.minicolors.css",
+        "./assets/css/main.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/popper.js/dist/umd/popper.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/metismenu/dist/metisMenu.min.js",
+        "../node_modules/jquery-slimscroll/jquery.slimscroll.min.js",
+        "../node_modules/toastr/build/toastr.min.js",
+        "../node_modules/chart.js/dist/Chart.min.js",
+        "../node_modules/raphael/raphael.min.js",
+        "../node_modules/morris.js/morris.min.js",
+        "../node_modules/jquery-sparkline/jquery.sparkline.min.js",
+        "../node_modules/jvectormap/jquery-jvectormap.min.js",
+        "../node_modules/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js",
+        "../node_modules/jvectormap/tests/assets/jquery-jvectormap-us-aea-en.js",
+        "../node_modules/moment/min/moment.min.js",
+        "../node_modules/datatables.net/js/jquery.dataTables.js",
+        "../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js",
+        "../node_modules/datatables.net-buttons/js/dataTables.buttons.min.js",
+        "../node_modules/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js",
+        "../node_modules/datatables.net-buttons/js/buttons.html5.min.js",
+        "../node_modules/datatables.net-buttons/js/buttons.print.min.js",
+        "../node_modules/datatables.net-buttons/js/buttons.colVis.min.js",
+        "../node_modules/datatables.net-responsive/js/dataTables.responsive.min.js",
+        "../node_modules/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js",
+        "../node_modules/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js",
+        "../node_modules/jszip/dist/jszip.min.js",
+        "../node_modules/summernote/dist/summernote.js",
+        "../node_modules/bootstrap-markdown/js/bootstrap-markdown.js",
+        "../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+        "./assets/vendors/bootstrap-timepicker/js/bootstrap-timepicker.min.js",
+        "../node_modules/jquery-validation/dist/jquery.validate.min.js",
+        "./assets/vendors/jquery.maskedinput/dist/jquery.maskedinput.min.js",
+        "../node_modules/fullcalendar/dist/fullcalendar.min.js",
+        "./assets/vendors/jquery-knob/dist/jquery.knob.min.js",
+        "../node_modules/select2/dist/js/select2.full.min.js",
+        "../node_modules/jquery-minicolors/jquery.minicolors.min.js",
+        "./assets/js/app.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "src/tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

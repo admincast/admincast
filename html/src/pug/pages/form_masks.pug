@@ -1,0 +1,83 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Form masks'
+  - var pageUrl = 'form_masks.html'
+  - var page_heading = 'Form masks'
+  - var path = ['Form masks']
+
+block plugins
+  +script('jquery.maskedinput/dist/jquery.maskedinput.min.js', 'plugin')
+
+block content
+    .alert.bg-white
+      h4 Masked Input Plugin
+      p
+        | This is a masked input plugin for the jQuery javascript library. It allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates,phone numbers, etc).
+      p
+        a.btn.btn-success(href='https://github.com/digitalBush/jquery.maskedinput', target='_blank') Official Site
+    +panel(title='Input Masks', tools={'collapse':1})
+        form.form-horizontal
+            .form-group.row
+                label.col-sm-2.col-form-label Date
+                .col-sm-8
+                    input#ex-date.form-control(type='text')
+                    span.help-block
+                        | Data format dd/mm/yyyy
+                        span
+            .form-group.row
+                label.col-sm-2.col-form-label Phone
+                .col-sm-8
+                    input#ex-phone.form-control(type='text')
+                    span.help-block Data format (999) 999-9999
+            .form-group.row
+                label.col-sm-2.col-form-label Phone 2
+                .col-sm-8
+                    input#ex-phone2.form-control(type='text')
+                    span.help-block Data format +186 999 999-9999
+            .form-group.row
+                label.col-sm-2.col-form-label Extention
+                .col-sm-8
+                    input#ex-ext.form-control(type='text')
+                    span.help-block Data format (999) 999-9999? x9999
+            .form-group.row
+                label.col-sm-2.col-form-label Credit card
+                .col-sm-8
+                    input#ex-credit.form-control(type='text')
+                    span.help-block Data format ****-****-****-****
+            .form-group.row
+                label.col-sm-2.col-form-label Tax ID
+                .col-sm-8
+                    input#ex-tax.form-control(type='text')
+                    span.help-block Data format 99-9999999
+            .form-group.row
+                label.col-sm-2.col-form-label Currency
+                .col-sm-8
+                    input#ex-currency.form-control(type='text')
+                    span.help-block Data format $ 99.99
+            .form-group.row
+                label.col-sm-2.col-form-label Product Key
+                .col-sm-8
+                    input#ex-product.form-control(type='text')
+                    span.help-block Data format a*-999-a999
+            .form-group.row
+                label.col-sm-2.col-form-label Eye Script
+                .col-sm-8
+                    input#ex-eye.form-control(type='text')
+                    span.help-block Data format ~9.99 ~9.99 999
+
+block scripts
+  script(type='text/javascript').
+    $(function(){
+      $('#ex-date').mask('99/99/9999', {placeholder: 'dd/mm/yyyy'});
+      $('#ex-phone').mask('(999) 999-9999');
+      $('#ex-phone2').mask('+186 999 999-9999');
+      $('#ex-ext').mask('(999) 999-9999? x9999');
+      $('#ex-credit').mask('****-****-****-****',{placeholder:'*'});
+      $('#ex-tax').mask('99-9999999');
+      $('#ex-currency').mask('$ 99.99');
+      $('#ex-product').mask('a*-999-a999', {placeholder: 'a*-999-a999'});
+
+      $.mask.definitions['~']='[+-]';
+      $('#ex-eye').mask('~9.99 ~9.99 999');
+    })

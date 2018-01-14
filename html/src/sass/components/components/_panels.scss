@@ -1,0 +1,77 @@
+
+.ibox {
+    position: relative;
+    margin-bottom: 25px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    .ibox-head {
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        .ibox-title {
+            font-size: 16px;
+            font-weight: 600;
+            small {
+                font-weight: 400;
+                font-size: 13px;
+                color: #777;
+                a {color:inherit}
+            }
+        }
+        .ibox-tools {
+            position: relative;
+            & > a {
+                color: #aaa;
+                font-size: 14px;
+                padding: 0 6px;
+                &:hover {color: #6d7c85}
+            }
+        }
+        .nav-tabs {
+            margin: 0;
+            border: 0;
+            height: 100%;
+            .nav-link {
+                height: 100%;
+                padding: .9rem 1rem;
+            }
+        }
+    }
+    .ibox-body {
+        padding: 15px 20px 20px 20px;
+    }
+    .ibox-footer {
+        padding: 10px 0;
+        border-top: 1px solid #eee;
+    }
+    &.ibox-fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        z-index: 1005;
+        .fullscreen-link > i::before {content: "\f066"}
+    }
+    &.collapsed-mode {
+        .ibox-collapse > i::before { content: "\f067" }
+    }
+}
+
+//== Contextual Panels
+
+.ibox-primary { @include panel-variant($brand-primary, #fff, #fff) }
+.ibox-success { @include panel-variant($brand-success, #fff, #fff) }
+.ibox-info { @include panel-variant($brand-info, #fff, #fff) }
+.ibox-warning { @include panel-variant($brand-warning, #fff, #fff) }
+.ibox-danger { @include panel-variant($brand-danger, #fff, #fff) }
+.ibox-grey { @include panel-variant($brand-default, #fff, #fff) }
+
+
+body.fullscreen-mode {
+    overflow-y: hidden;
+}

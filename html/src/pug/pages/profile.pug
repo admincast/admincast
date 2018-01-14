@@ -1,0 +1,280 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Profile'
+  - var pageUrl = 'profile.html'
+  - var page_heading = 'Profile'
+  - var path = ['Profile']
+  - var body_class = 'sidebar-mini'
+
+block plugins
+    +script('chart.js/dist/Chart.min.js', 'plugin')
+
+block content
+  .row
+    .col-lg-3.col-md-4
+      +panel()(bodyClass='text-center')
+        .m-t-20
+            +img('users/u3.jpg')(class='img-circle')
+        h5.font-strong.m-b-10.m-t-10 Frank Cruz
+        .m-b-20.text-muted Web Developer
+        .profile-social.m-b-20
+            a(href='javascript:;')
+                i.fa.fa-twitter
+            a(href='javascript:;')
+                i.fa.fa-facebook
+            a(href='javascript:;')
+                i.fa.fa-pinterest
+            a(href='javascript:;')
+                i.fa.fa-dribbble
+        div
+            button.btn.btn-info.btn-rounded.m-b-5
+                i.fa.fa-plus
+                |  Follow
+            button.btn.btn-default.btn-rounded.m-b-5 Message
+      +panel()
+        .row.text-center.m-b-20
+            .col-4
+                .font-24.profile-stat-count 140
+                .text-muted Followers
+            .col-4
+                .font-24.profile-stat-count $780
+                .text-muted Sales
+            .col-4
+                .font-24.profile-stat-count 15
+                .text-muted Projects
+        p.text-center
+            | Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been
+    .col-lg-9.col-md-8
+      +panel()
+        ul.nav.nav-tabs.tabs-line
+            li.nav-item
+                a.nav-link.active(href='#tab-1', data-toggle='tab') <i class="ti-bar-chart"></i> Overview
+            li.nav-item
+                a.nav-link(href='#tab-2', data-toggle='tab') <i class="ti-settings"></i> Settings
+            li.nav-item
+                a.nav-link(href='#tab-3', data-toggle='tab') <i class="ti-announcement"></i> Feeds
+        .tab-content
+            #tab-1.tab-pane.fade.show.active
+                .row
+                    .col-md-6(style="border-right: 1px solid #eee")
+                        h5.text-info.m-b-20.m-t-10 <i class="fa fa-bar-chart"></i> Month Statistics
+                        .h2.m-0
+                            | $12,400
+                            sup .60
+                        div
+                            small Month income
+                        .m-t-20.m-b-20
+                            .h4.m-0 120
+                            .d-flex.justify-content-between
+                                small Month income
+                                span.text-success.font-12
+                                    i.fa.fa-level-up
+                                    |  +24%
+                            .progress.m-t-5
+                                .progress-bar.progress-bar-success(role='progressbar', style='width:50%; height:5px;', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                        .m-b-20
+                            .h4.m-0 86
+                            .d-flex.justify-content-between
+                                small Month income
+                                span.text-warning.font-12
+                                    i.fa.fa-level-down
+                                    |  -12%
+                            .progress.m-t-5
+                                .progress-bar.progress-bar-warning(role='progressbar', style='width:50%; height:5px', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                        ul.list-group.list-group-full.list-group-divider
+                            li.list-group-item
+                                | Projects 
+                                span.pull-right.color-orange 15
+                            li.list-group-item
+                                | Tasks 
+                                span.pull-right.color-orange 148
+                            li.list-group-item
+                                | Articles 
+                                span.pull-right.color-orange 72
+                            li.list-group-item
+                                | Friends 
+                                span.pull-right.color-orange 44
+                    .col-md-6
+                        h5.text-info.m-b-20.m-t-10 <i class="fa fa-user-plus"></i> Latest Followers
+                        ul.media-list.media-list-divider.m-0
+                            li.media
+                              a.media-img(href='javascript:;')
+                                +img('users/u1.jpg')(class='img-circle' width='40')
+                              .media-body
+                                .media-heading
+                                  | Jeanne Gonzalez 
+                                  small.float-right.text-muted 12:05
+                                .font-13 Lorem Ipsum is simply dummy text of the printing and typesetting.
+                            li.media
+                              a.media-img(href='javascript:;')
+                                +img('users/u2.jpg')(class='img-circle' width='40')
+                              .media-body
+                                .media-heading
+                                  | Becky Brooks 
+                                  small.float-right.text-muted 1 hrs ago
+                                .font-13 Lorem Ipsum is simply dummy text of the printing and typesetting.
+                            li.media
+                              a.media-img(href='javascript:;')
+                                +img('users/u3.jpg')(class='img-circle' width='40')
+                              .media-body
+                                .media-heading
+                                  | Frank Cruz 
+                                  small.float-right.text-muted 3 hrs ago
+                                .font-13 Lorem Ipsum is simply dummy.
+                            li.media
+                              a.media-img(href='javascript:;')
+                                +img('users/u6.jpg')(class='img-circle' width='40')
+                              .media-body
+                                .media-heading
+                                  | Connor Perez 
+                                  small.float-right.text-muted Today
+                                .font-13 Lorem Ipsum is simply dummy text of the printing and typesetting.
+                            li.media
+                              a.media-img(href='javascript:;')
+                                +img('users/u5.jpg')(class='img-circle' width='40')
+                              .media-body
+                                .media-heading
+                                  | Bob Gonzalez 
+                                  small.float-right.text-muted Today
+                                .font-13 Lorem Ipsum is simply dummy.
+                h4.text-info.m-b-20.m-t-20 <i class="fa fa-shopping-basket"></i> Latest Orders
+                table.table.table-striped.table-hover
+                    thead
+                        tr
+                            th Order ID
+                            th Customer
+                            th Amount
+                            th Status
+                            th(width='91px') Date
+                    tbody
+                        tr
+                            td 11
+                            td @Jack
+                            td $564.00
+                            td
+                                span.badge.badge-success Shipped
+                            td 10/07/2017
+                        tr
+                            td 12
+                            td @Amalia
+                            td $220.60
+                            td
+                                span.badge.badge-success Shipped
+                            td 10/07/2017
+                        tr
+                            td 13
+                            td @Emma
+                            td $760.00
+                            td
+                                span.badge.badge-default Pending
+                            td 10/07/2017
+                        tr
+                            td 14
+                            td @James
+                            td $87.60
+                            td
+                                span.badge.badge-warning Expired
+                            td 10/07/2017
+                        tr
+                            td 15
+                            td @Ava
+                            td $430.50
+                            td
+                                span.badge.badge-default Pending
+                            td 10/07/2017
+                        tr
+                            td 16
+                            td @Noah
+                            td $64.00
+                            td
+                                span.badge.badge-success Shipped
+                            td 10/07/2017
+            #tab-2.tab-pane.fade
+                form(action='javascript:void(0)')
+                    .row
+                        .col-sm-6.form-group
+                            label First Name
+                            input.form-control(type='text', placeholder='First Name')
+                        .col-sm-6.form-group
+                            label Last Name
+                            input.form-control(type='text', placeholder='First Name')
+                    .form-group
+                        label Email
+                        input.form-control(type='text', placeholder='Email address')
+                    .form-group
+                        label Password
+                        input.form-control(type='password', placeholder='Password')
+                    .form-group
+                        label.ui-checkbox
+                            input(type='checkbox')
+                            span.input-span
+                            | Remamber me
+                    .form-group
+                        button.btn.btn-default(type='button') Submit
+            #tab-3.tab-pane.fade
+                h5.text-info.m-b-20.m-t-20 <i class="fa fa-bullhorn"></i> Latest Feeds
+                ul.media-list.media-list-divider.m-0
+                  li.media
+                    .media-img
+                      i.ti-user.font-18.text-muted
+                    .media-body
+                      .media-heading
+                        | New customer 
+                        small.float-right.text-muted 12:05
+                      .font-13 Lorem Ipsum is simply dummy text.
+                  li.media
+                    .media-img
+                      i.ti-info-alt.font-18.text-muted
+                    .media-body
+                      .media-heading.text-warning
+                        | Server Warning 
+                        small.float-right.text-muted 12:05
+                      .font-13 Lorem Ipsum is simply dummy text.
+                  li.media
+                    .media-img
+                      i.ti-announcement.font-18.text-muted
+                    .media-body
+                      .media-heading
+                        | 7 new feedback 
+                        small.float-right.text-muted Today
+                      .font-13 Lorem Ipsum is simply dummy text.
+                  li.media
+                    .media-img
+                      i.ti-check.font-18.text-muted
+                    .media-body
+                      .media-heading.text-success
+                        | Issue fixed 
+                        small.float-right.text-muted 12:05
+                      .font-13 Lorem Ipsum is simply dummy text.
+                  li.media
+                    .media-img
+                      i.ti-shopping-cart.font-18.text-muted
+                    .media-body
+                      .media-heading
+                        | 7 New orders 
+                        small.float-right.text-muted 12:05
+                      .font-13 Lorem Ipsum is simply dummy text.
+                  li.media
+                    .media-img
+                      i.ti-reload.font-18.text-muted
+                    .media-body
+                      .media-heading.text-danger
+                        | Server warning 
+                        small.float-right.text-muted 12:05
+                      .font-13 Lorem Ipsum is simply dummy text.
+  style.
+    .profile-social a {
+        font-size: 16px;
+        margin: 0 10px;
+        color: #999;
+    }
+    .profile-social a:hover {
+        color: #485b6f; 
+    }
+    .profile-stat-count {
+        font-size:22px
+    }       
+
+block scripts
+  +script('profile-demo.js', 'page')

@@ -1,0 +1,150 @@
+.form-control {
+    border-radius: 2px;
+    box-shadow: none !important;
+    &:focus {
+        border-color: $brand-info;
+    }
+}
+.input-rounded {border-radius: 200px}
+.input-group-addon {
+    color: #5d6064;
+    color: #71808f;
+    border-radius: 2px !important;
+}
+.help-block {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+.input-group-icon {
+    position: relative;
+    color: #71808f;
+    .form-control {
+        padding-left: 33px;
+    }
+    .input-icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 33px;
+        line-height: 33px;
+        width: 34px;
+        text-align: center;
+    }    
+    &.right {
+        .input-icon {
+            right: 0;
+            left: auto;
+        }
+        .form-control {
+            padding-left: 12px;
+            padding-right: 33px;
+        }
+    }
+}
+
+
+.has-success {
+    .form-control, .form-control:focus {border-color: $brand-success}
+    .control-label, .col-form-label, .input-icon > i {color: $brand-success}
+}
+.has-warning {
+    .form-control, .form-control:focus {border-color: $brand-warning}
+    .control-label, .col-form-label, .input-icon > i {color: $brand-warning}
+}
+.has-error {
+    .form-control, .form-control:focus {border-color: $brand-danger}
+    .control-label, .col-form-label, .help-block, .error, .input-icon > i {color: $brand-danger}
+}
+
+.help-block.error {color: $brand-danger}
+
+
+.ui-checkbox, .ui-radio {
+    position: relative;
+    margin-bottom: 0;
+    cursor: pointer;
+    padding-left: 28px;
+    font-weight: 400;
+    min-height: 20px;
+    .input-span {
+        position: absolute;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        left: 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        &::after {
+            content: '';
+            position: absolute;
+            display: none;
+            width: 5px;
+            height: 10px;
+            left: 7px;
+            top: 3px;
+            border: solid #888;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        &:checked {
+            & ~ .input-span:after {
+                display: block;
+            }
+        }
+    }
+    &:hover {
+        .input-span {
+            border-color: #b8b8b8;
+        }
+    }
+    &.ui-checkbox-gray, &.ui-radio-gray {
+        .input-span {
+            background-color: #E6E6E6;
+            border-color: transparent;
+            &::after {
+                border-color: #888;
+            }
+        }
+    }
+    &.disabled {
+        opacity: .7;
+        cursor: not-allowed;
+    }
+    &.check-single {padding-left:18px}
+}
+
+.ui-radio {
+    .input-span {
+        border-radius: 50%;
+        &::after {
+            border: 0;
+            height: 6px;
+            left: 6px;
+            top: 6px;
+            width: 6px;
+            background: #888;
+            border-radius: 100%;
+        }
+    }
+}
+.check-list {
+    .ui-checkbox, .ui-radio {display: block;}
+    .ui-checkbox + .ui-checkbox, .ui-radio + .ui-radio {margin-top:8px}
+}
+
+.ui-checkbox-inline, .ui-radio-inline {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+@include checkbox-variant('primary', $brand-primary, #fff);
+@include checkbox-variant('success', $brand-success, #fff);
+@include checkbox-variant('info', $brand-info, #fff);
+@include checkbox-variant('warning', $brand-warning, #fff);
+@include checkbox-variant('danger', $brand-danger, #fff);

@@ -1,0 +1,80 @@
+
+// THEME CONFIG PANEL
+// ===================
+
+.theme-config {
+    position: absolute;
+    right: -310px;
+    top: 90px;
+    z-index: 1001;
+    width: 310px;
+    transition: right .3s ease-in-out;
+    .theme-config-toggle {
+        position:absolute;
+        left: -34px;
+        height: 38px;
+        width: 35px;
+        background-color: #23b7e5;
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+        .theme-config-show {
+            font-size: 22px;
+            color: #fff;
+            line-height: 38px;
+            animation: fa-spin 3s infinite linear;
+        }
+        .theme-config-close {
+            display: none;
+            font-size: 18px;
+            line-height: 38px;
+        }
+    }
+    .theme-config-box {
+        padding: 10px 20px 20px;
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,.1);
+        .ui-checkbox + .ui-checkbox{margin-top: 15px;}
+    }
+    &.opened {
+        right: 0;
+        .theme-config-toggle {
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,.1);
+            border-right: none;
+            .theme-config-show {
+                display: none;
+            }
+            .theme-config-close {
+                display: block;
+            }
+            .close-btn {
+                display: block;
+            }
+        }
+    }
+    .color-skin-box {
+        position: relative;
+        flex: 1;
+        margin: 0 5px;
+        border: 1px solid #ddd;
+        .color {height: 40px}
+        .color-small {display: block; height: 18px}
+        .color-check-icon {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            opacity: 0;
+            font-size: 16px;
+        }
+        label {display:block; cursor:pointer; margin:0}
+        input {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            &:checked + .color-check-icon {opacity:1}
+        }
+    }
+}
+

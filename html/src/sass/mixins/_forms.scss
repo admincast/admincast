@@ -1,0 +1,30 @@
+
+
+@mixin checkbox-variant($state, $background, $color) {
+    .ui-checkbox-#{$state} {
+        input:checked {
+            & ~ .input-span {
+                background-color: $background;
+                border-color: $background;
+                &::after {
+                    border-color: $color;
+                }
+            }
+        }
+    }
+    .ui-radio-#{$state} {
+        .input-span, &:hover .input-span {
+            border-color: $background;
+        }
+        input:checked {
+            & ~ .input-span {
+                background-color: $background;
+                &::after {
+                    background-color: $color;
+                }
+            }
+        }
+    }
+
+}
+

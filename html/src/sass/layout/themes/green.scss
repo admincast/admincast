@@ -1,0 +1,29 @@
+$green : #2ecc71;
+
+@import 'sidebar-dark';
+
+.header {
+    background-color: $green;
+    .page-brand {
+        color: #fff;
+        background-color: darken($green, 10%);
+    }
+    .navbar-toolbar {
+        & > li > a {
+            &, &:hover, &:focus {
+                color: #fff;
+            }
+        }
+        .navbar-search {
+            .form-control {
+                background-color: transparent;
+                &, &::placeholder {
+                    color: #fff;
+                }
+            }
+            .search-icon {
+                color: #fff;
+            }
+        }
+    }
+}

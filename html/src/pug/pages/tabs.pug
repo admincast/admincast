@@ -1,0 +1,241 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Tabs & Accordions'
+  - var pageUrl = 'tabs.html'
+  - var page_heading = 'Tabs & Accordions'
+  - var path = ['Tabs & Accordions']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='Line tabs')
+        ul.nav.nav-tabs.tabs-line
+            li.nav-item
+                a.nav-link.active(href='#tab-7-1', data-toggle='tab') <i class="fa fa-line-chart"></i> First
+            li.nav-item
+                a.nav-link(href='#tab-7-2', data-toggle='tab') <i class="fa fa-heartbeat"></i> Second
+            li.nav-item
+                a.nav-link(href='#tab-7-3', data-toggle='tab') <i class="fa fa-life-ring"></i> Third
+        .tab-content
+            #tab-7-1.tab-pane.fade.show.active
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-7-2.tab-pane
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-7-3.tab-pane.fade Third tab
+        br
+      .ibox
+        .ibox-head
+          .ibox-title Tabs in Panel
+          ul.nav.nav-tabs.tabs-line.pull-right
+              li.nav-item
+                a.nav-link.active(href='#tab-8-1', data-toggle='tab') <i class="fa fa-taxi"></i> Tab
+              li.nav-item
+                a.nav-link(href='#tab-8-2', data-toggle='tab') <i class="fa fa-bus"></i> Tab
+              li.nav-item
+                a.nav-link(href='#tab-8-3', data-toggle='tab') <i class="fa fa-plane"></i> Tab
+        .ibox-body
+          .tab-content
+            #tab-8-1.tab-pane.fade.show.active
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-8-2.tab-pane
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-8-3.tab-pane.fade Third tab
+          br
+      +panel(title='Aligned options')
+        .clf
+          ul.nav.nav-tabs.tabs-line-left
+            li.nav-item
+                a.nav-link.active(href='#tab-9-1', data-toggle='tab') <i class="fa fa-line-chart"></i> First
+            li.nav-item
+                a.nav-link(href='#tab-9-2', data-toggle='tab') <i class="fa fa-heartbeat"></i> Second
+            li.nav-item
+                a.nav-link(href='#tab-9-3', data-toggle='tab') <i class="fa fa-life-ring"></i> Third
+          .tab-content
+            #tab-9-1.tab-pane.fade.show.active
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-9-2.tab-pane
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-9-3.tab-pane.fade Third tab
+        br
+        .clf
+          ul.nav.nav-tabs.tabs-line-right
+            li.nav-item
+                a.nav-link.active(href='#tab-10-1', data-toggle='tab') <i class="fa fa-line-chart"></i> First
+            li.nav-item
+                a.nav-link(href='#tab-10-2', data-toggle='tab') <i class="fa fa-heartbeat"></i> Second
+            li.nav-item
+                a.nav-link(href='#tab-10-3', data-toggle='tab') <i class="fa fa-life-ring"></i> Third
+          .tab-content
+            #tab-10-1.tab-pane.fade.show.active
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-10-2.tab-pane
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-10-3.tab-pane.fade Third tab
+        br
+        .clf
+          ul.nav.nav-tabs.tabs-line.nav-fill
+            li.nav-item
+                a.nav-link.active(href='#tab-11-1', data-toggle='tab') <i class="fa fa-line-chart"></i> First
+            li.nav-item
+                a.nav-link(href='#tab-11-2', data-toggle='tab') <i class="fa fa-heartbeat"></i> Second
+            li.nav-item
+                a.nav-link(href='#tab-11-3', data-toggle='tab') <i class="fa fa-life-ring"></i> Third
+          .tab-content
+            #tab-11-1.tab-pane.fade.show.active
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-11-2.tab-pane
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-11-3.tab-pane.fade Third tab
+    .col-md-6
+      +panel(title='Basic Bootstrap tabs')
+        ul.nav.nav-tabs
+            li.nav-item
+                a.nav-link.active(href='#tab-1-1', data-toggle='tab') <i class="fa fa-line-chart"></i> First
+            li.nav-item
+                a.nav-link(href='#tab-1-2', data-toggle='tab') <i class="fa fa-heartbeat"></i> Second
+            li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(data-toggle='dropdown')
+                    | More 
+                    i.fa.fa-angle-down
+                ul.dropdown-menu(role='menu')
+                  a.dropdown-item(href='#tab-1-3', data-toggle='tab') Third tab
+                  a.dropdown-item(href='#tab-1-4', data-toggle='tab') Fourth tab
+        .tab-content
+            #tab-1-1.tab-pane.fade.show.active
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-1-2.tab-pane
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-1-3.tab-pane.fade Third tab
+            #tab-1-4.tab-pane.fade Fourth tab
+        br
+      +panel(title='Aligned options')
+        .clf
+            ul.nav.flex-column.nav-tabs.tabs-left
+                li.nav-item
+                    a.nav-link.active(href='#tab-6-1', data-toggle='tab') <i class="fa fa-line-chart"></i> Tab
+                li.nav-item
+                    a.nav-link(href='#tab-6-2', data-toggle='tab') <i class="fa fa-heartbeat"></i> Tab
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle(data-toggle='dropdown')
+                        | More 
+                        i.fa.fa-angle-down
+                    ul.dropdown-menu
+                      a.dropdown-item(href='#tab-6-3', data-toggle='tab') Third tab
+                      a.dropdown-item(href='#tab-6-4', data-toggle='tab') Fourth tab
+            .tab-content
+                #tab-6-1.tab-pane.fade.show.active
+                    | Add 
+                    code .tabs-left
+                    | . Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor. Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+                #tab-6-2.tab-pane
+                    | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+                #tab-6-3.tab-pane.fade Third tab
+                #tab-6-4.tab-pane.fade Fourth tab
+        br
+        .clf
+            ul.nav.flex-column.nav-tabs.tabs-right
+                li.nav-item
+                    a.nav-link.active(href='#tab-5-1', data-toggle='tab') First
+                li.nav-item
+                    a.nav-link(href='#tab-5-2', data-toggle='tab') Second
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle(data-toggle='dropdown')
+                        | More 
+                        i.fa.fa-angle-down
+                    ul.dropdown-menu(role='menu')
+                        a.dropdown-item(href='#tab-5-3', data-toggle='tab') Third tab
+                        a.dropdown-item(href='#tab-5-4', data-toggle='tab') Fourth tab
+            .tab-content
+                #tab-5-1.tab-pane.fade.show.active
+                    | Add 
+                    code .tabs-right
+                    | . Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor. Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+                #tab-5-2.tab-pane
+                    | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+                #tab-5-3.tab-pane.fade Third tab
+                #tab-5-4.tab-pane.fade Fourth tab
+        br
+        ul.nav.nav-tabs.flex-row-reverse
+            li.nav-item
+                a.nav-link.active(href='#tab-4-1', data-toggle='tab') First
+            li.nav-item
+                a.nav-link(href='#tab-4-2', data-toggle='tab') Second
+            li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(data-toggle='dropdown')
+                    | Dropdown 
+                    i.fa.fa-angle-down
+                ul.dropdown-menu
+                  a.dropdown-item(href='#tab-4-3', data-toggle='tab') Third tab
+                  a.dropdown-item(href='#tab-4-4', data-toggle='tab') Fourth tab
+        .tab-content
+            #tab-4-1.tab-pane.fade.show.active
+                | Add 
+                code .flex-row-reverse
+                |  for reversed tabs. Lorem Ipsum  haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor.
+            #tab-4-2.tab-pane
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-4-3.tab-pane.fade Third tab
+            #tab-4-4.tab-pane.fade Fourth tab
+        br
+        ul.nav.nav-tabs.nav-fill
+            li.nav-item
+                a.nav-link.active(href='#tab-2-1', data-toggle='tab') First
+            li.nav-item
+                a.nav-link(href='#tab-2-2', data-toggle='tab') Second
+            li.nav-item
+                a.nav-link(href='#tab-2-2', data-toggle='tab') Third
+        .tab-content
+            #tab-2-1.tab-pane.fade.show.active
+                | Add 
+                code .nav-fill
+                |  for justify tabs. Lorem Ipsum  haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor.
+            #tab-2-2.tab-pane
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-2-3.tab-pane.fade Third tab
+        br
+        .tab-content
+            #tab-3-1.tab-pane.fade.show.active
+                | Add 
+                code .tabs-below
+                |  for below tabs. Lorem Ipsum haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-3-2.tab-pane
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #tab-3-3.tab-pane.fade Third tab
+            #tab-3-4.tab-pane.fade Fourth tab
+        ul.nav.nav-tabs.tabs-below
+            li.nav-item
+                a.nav-link.active(href='#tab-3-1', data-toggle='tab') First
+            li.nav-item
+                a.nav-link(href='#tab-3-2', data-toggle='tab') Second
+            li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(data-toggle='dropdown')
+                    | Dropdown 
+                    i.fa.fa-angle-up
+                ul.dropdown-menu(role='menu')
+                  a.dropdown-item(href='#tab-3-3', data-toggle='tab') Third tab
+                  a.dropdown-item(href='#tab-3-4', data-toggle='tab') Fourth tab
+      +panel(title='Default pills')
+        ul.nav.nav-pills
+            li.nav-item
+                a.nav-link.active(href='#pill-1-1', data-toggle='tab') First
+            li.nav-item
+                a.nav-link(href='#pill-1-2', data-toggle='tab') Second
+            li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(data-toggle='dropdown')
+                    | Dropdown 
+                    i.fa.fa-angle-down
+                ul.dropdown-menu(role='menu')
+                  a.dropdown-item(href='#pill-1-3', data-toggle='tab') Third tab
+                  a.dropdown-item(href='#pill-1-4', data-toggle='tab') Fourth tab
+        .tab-content
+            #pill-1-1.tab-pane.fade.show.active
+                | As in the case of tabs available 
+                code .tabs-reversed
+                |  and  
+                code .tabs-below
+                |  classes. Lorem Ipsum heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor.
+            #pill-1-2.tab-pane
+                | Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+            #pill-1-3.tab-pane.fade Third tab
+            #pill-1-4.tab-pane.fade Fourth tab

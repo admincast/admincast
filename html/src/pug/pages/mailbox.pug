@@ -1,0 +1,277 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Mailbox'
+  - var pageUrl = 'mailbox.html'
+  - var page_heading = 'Mailbox'
+  - var path = ['Mailbox']
+
+block page_styles
+    +link('mailbox.css', 'page')
+
+block scripts
+    +script('mailbox.js', 'page')
+
+block content
+  .row
+    .col-lg-3.col-md-4
+        a.btn.btn-info.btn-block(href='mail_compose.html')
+            i.fa.fa-edit
+            |  Compose
+        br
+        h6.m-t-10.m-b-10 FOLDERS
+        ul.list-group.list-group-divider.inbox-list
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-inbox
+                    |  Inbox (6) 
+                    span.badge.badge-warning.badge-square.pull-right 17
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-envelope-o
+                    |  Sent
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-star-o
+                    |  Important 
+                    span.badge.badge-success.badge-square.pull-right 2
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-file-text-o
+                    |  Drafts
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-trash-o
+                    |  Trash
+        h6.m-t-10.m-b-10 LABELS
+        ul.list-group.list-group-divider.inbox-list
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-success
+                    |  Support
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-warning
+                    |  Business
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-info
+                    |  Work
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-danger
+                    |  System
+            li.list-group-item
+                a(href='javascript:;')
+                    i.fa.fa-circle-o.font-13.text-muted
+                    |  Social
+    .col-lg-9.col-md-8
+        #mailbox-container.ibox
+            .mailbox-header
+                .d-flex.justify-content-between
+                    h5.d-none.d-lg-block.inbox-title
+                        i.fa.fa-envelope-o.m-r-5
+                        |  Inbox (15)
+                    form.mail-search(action='javascript:;')
+                        .input-group
+                            input.form-control(type='text', placeholder='Search email')
+                            .input-group-btn
+                                button.btn.btn-info Search
+                .d-flex.justify-content-between.inbox-toolbar.p-t-20
+                    div.d-flex
+                        label.ui-checkbox.ui-checkbox-info.check-single.p-t-5.m-r-20
+                            input(type='checkbox', data-select='all')
+                            span.input-span
+                        #inbox-actions
+                            button.btn.btn-default.btn-sm(data-toggle='tooltip', data-original-title='Mark as read')
+                                i.fa.fa-eye
+                            button.btn.btn-default.btn-sm(data-toggle='tooltip', data-original-title='Mark as important')
+                                i.fa.fa-star-o
+                            button.btn.btn-default.btn-sm(data-toggle='tooltip', data-original-title='Reply')
+                                i.fa.fa-reply
+                            button.btn.btn-default.btn-sm(data-toggle='tooltip', data-original-title='Delete')
+                                i.fa.fa-trash-o
+                        span.counter-selected.m-l-5(hidden='')
+                            | Selected 
+                            span.font-strong.text-warning.counter-count 3
+                    div
+                        span.p-r-10.font-13 1-50 of 420
+                        .btn-group.btn-group-sm
+                            button.btn.btn-default
+                                i.fa.fa-chevron-left
+                            button.btn.btn-default
+                                i.fa.fa-chevron-right
+            .mailbox.clf
+                table#table-inbox.table.table-hover.table-inbox
+                    tbody.rowlinkx(data-link='row')
+                        tr(data-id='1')
+                            td.check-cell.rowlink-skip
+                                label.ui-checkbox.ui-checkbox-info.check-single
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Emma Johnson
+                            td.mail-message Fusce suscipit semper erat, vel solo.
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                                i.fa.fa-circle.text-success
+                            td.text-right 5.22 AM
+                        tr.unread(data-id='2')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Olivia Smith
+                            td.mail-message Mauris in sem at quam elementum sagittis vel.
+                            td.hidden-xs
+                                i.fa.fa-paperclip
+                            td.mail-label.hidden-xs
+                                i.fa.fa-circle.text-warning
+                            td.text-right 4.10 AM
+                        tr.unread(data-id='3')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Noah Williams
+                            td.mail-message Neque porro quisquam est qui dolorem ipsum quia
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                            td.text-right 1.20 AM
+                        tr(data-id='4')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Sophia Jones
+                            td.mail-message Lorem ipsum dolor sit.
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                            td.text-right Jan 10
+                        tr(data-id='5')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Jacob Brown
+                            td.mail-message Nam vitae magna sollicitudin, fringilla neque sit.
+                            td.hidden-xs
+                                i.fa.fa-paperclip
+                            td.mail-label.hidden-xs
+                            td.text-right Dec 18
+                        tr(data-id='6')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') James Davis
+                            td.mail-message Donec eget diam quis lectus auctor.
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                            td.text-right Dec 12
+                        tr(data-id='7')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Ava Wilson
+                            td.mail-message Duis hendrerit tellus tellus, ut lobortis quam.
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                                i.fa.fa-circle.text-success
+                            td.text-right Sep 7
+                        tr.unread(data-id='8')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Ethan Taylor
+                            td.mail-message Neque porro quisquam est qui dolorem ipsum quia dolor
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                            td.text-right Sep 1
+                        tr(data-id='9')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Emily Thomas
+                            td.mail-message Proin dictum sem felis, eu.
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                            td.text-right July 8
+                        tr(data-id='10')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Noah Moore
+                            td.mail-message Phasellus massa velit, sodales non sollicitudin nec.
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                            td.text-right July 6
+                        tr(data-id='11')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Mia Anderson
+                            td.mail-message Pellentesque rutrum auctor magna vel facilisis. Aliquam.
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                                i.fa.fa-circle.text-danger
+                            td.text-right June 15
+                        tr(data-id='12')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Amelia Harris
+                            td.mail-message In ac imperdiet nulla. Proin interdum enim.
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                            td.text-right June 8
+                        tr(data-id='13')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Sofia Jackson
+                            td.mail-message Morbi et lacus malesuada, cursus est non yet.
+                            td.hidden-xs
+                                i.fa.fa-paperclip
+                            td.mail-label.hidden-xs
+                            td.text-right April 27
+                        tr.unread(data-id='14')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Daniel Garcia
+                            td.mail-message Suspendisse potenti. Donec in vestibulum tortor. Duis.
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                            td.text-right April 25
+                        tr(data-id='15')
+                            td.check-cell
+                                label.ui-checkbox.ui-checkbox-info
+                                    input.mail-check(type='checkbox')
+                                    span.input-span
+                            td: a(href='mail_view.html') Lucas Martin
+                            td.mail-message Curabitur id ultrices erat. Praesent rhoncus augue.
+                            td.hidden-xs
+                            td.mail-label.hidden-xs
+                            td.text-right April 25
+                ul.pagination.justify-content-end.m-t-0.m-r-10
+                    li.page-item
+                        a.page-link(href='javascript:;', aria-label='Previous')
+                            span(aria-hidden='true'): i.fa.fa-angle-left
+                    li.page-item.active
+                        a.page-link(href='javascript:;') 1
+                    li.page-item
+                        a.page-link(href='javascript:;') 2
+                    li.page-item
+                        a.page-link(href='javascript:;') 3
+                    li.page-item
+                        a.page-link(href='javascript:;') 4
+                    li.page-item
+                        a.page-link(href='javascript:;', aria-label='Next'): i.fa.fa-angle-right

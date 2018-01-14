@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Sparkline Charts'
+  - var pageUrl = 'charts_sparkline.html'
+  - var page_heading = 'Sparkline Charts'
+  - var path = ['Sparkline Charts']
+
+block plugins
+  +script('jquery-sparkline/dist/jquery.sparkline.min.js', 'plugin')
+
+block scripts
+  +script('sparkline-demo.js', 'page')
+
+block content
+    +panel('Sparkline Charts')
+        p Mouse speed <span id="mousespeed">Loading..</span>
+        p Inline <span class="sparkline">10,8,9,3,5,8,5</span> line graphs <span class="sparkline">8,4,0,0,0,0,1,4,4,10,10,10,10,0,0,0,4,6,5,9,10</span>
+        p Bar charts <span class="sparkbar">10,8,9,3,5,8,5</span> negative values: <span class="sparkbar">-3,1,2,0,3,-1</span> stacked: <span class="sparkbar">0:2,2:4,4:2,4:1</span>
+        p Pie charts <span class="sparkpie">1,1,2</span> <span class="sparkpie">1,5</span> <span class="sparkpie">20,50,80</span>
+        p Composite inline <span id="compositeline">8,4,0,0,0,0,1,4,4,10,10,10,10,0,0,0,4,6,5,9,10</span>
+        p Inline with normal range <span id="normalline">8,4,0,0,0,0,1,4,4,10,10,10,10,0,0,0,4,6,5,9,10</span>
+        p Composite bar <span id="compositebar">4,6,7,7,4,3,2,1,4</span>
+        p Discrete <span class="discrete1">4,6,7,7,4,3,2,1,4,4,5,6,7,6,6,2,4,5</span><br />
+        p Discrete with threshold <span id="discrete2">4,6,7,7,4,3,2,1,4</span>
+        p Customize size and colours <span id="linecustom">10,8,9,3,5,8,5,7</span>
+        p Tristate charts <span class="sparktristate">1,1,0,1,-1,-1,1,-1,0,0,1,1</span><br />
+        p Tristate chart using a colour map: <span class="sparktristatecols">1,2,0,2,-1,-2,1,-2,0,0,1,1</span>
+        p Box Plot: <span class="sparkboxplot">4,27,34,52,54,59,61,68,78,82,85,87,91,93,100</span><br />

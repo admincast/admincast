@@ -1,0 +1,56 @@
+include ../config.pug
+include ../vars.pug
+include ../mixins.pug
+
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width initial-scale=1.0")
+    title #{titlePrefix} | Login
+    // GLOBAL MAINLY STYLES
+    +link('bootstrap/dist/css/bootstrap.min.css', 'plugin')
+    // THEME STYLES
+    +link('assets/css/main.css')
+  body.bg-silver-100
+    .content
+        h1.m-t-20 500
+        p.error-title Internal Server Error
+        p.m-b-20
+            | We're sorry, but the server was unable to complete your request. You can 
+            a.color-green(href='index.html') Go homepage
+            |  or try the search bar below.
+        form(action='javascript:;')
+            .input-group
+                input.form-control(type='text', placeholder='Search for page')
+                .input-group-btn
+                    button.btn.btn-success(type='button') Search
+
+    style.
+        .content{
+            max-width: 450px;
+            margin:0 auto;
+            text-align: center;
+        }
+        .content h1 {
+            font-size: 160px
+        }
+        .error-title {
+            font-size:22px; 
+            font-weight:500;
+            margin-top: 30px
+        }
+        
+    // BEGIN PAGA BACKDROPS
+    div.sidenav-backdrop.backdrop
+    div.preloader-backdrop
+      div.page-preloader Loading
+    // END PAGA BACKDROPS
+
+    <!-- CORE PLUGINS -->
+    +script('jquery/dist/jquery.min.js', 'plugin')
+    +script('popper.js/dist/umd/popper.min.js', 'plugin')
+    +script('bootstrap/dist/js/bootstrap.min.js', 'plugin')
+    // CORE SCRIPTS
+    +script('assets/js/app.js')

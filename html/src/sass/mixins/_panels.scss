@@ -1,0 +1,14 @@
+
+
+@mixin panel-variant($background, $color: $ibox-tools-color, $hover-color: $ibox-tools-hover-color) {
+  & {
+    .ibox-head {
+      color: $color;
+      background-color: $background;
+      .ibox-tools > a, .ibox-tools > a:hover { 
+        color: $color;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,23 @@
+header.header
+  .page-brand
+    a(href='index.html').link
+      span.brand Admin<span class="brand-tip">CAST</span>
+      span.brand-mini AC
+  .flexbox.flex-1
+    // START TOP-LEFT TOOLBAR
+    ul.nav.navbar-toolbar
+      li
+        a.nav-link.sidebar-toggler.js-sidebar-toggler
+          i.ti-menu
+      li
+        form.navbar-search(action="javascript:;")
+          .rel
+            span.search-icon: i.ti-search
+            input.form-control(placeholder='Search here...')
+    // END TOP-LEFT TOOLBAR
+    // START TOP-RIGHT TOOLBAR
+    ul.nav.navbar-toolbar
+      include header/inbox.pug
+      include header/notification.pug
+      include header/user.pug
+    // END TOP-RIGHT TOOLBAR

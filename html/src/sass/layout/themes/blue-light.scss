@@ -1,0 +1,29 @@
+$blue : #3498db;
+
+@import 'sidebar-light';
+
+.header {
+    background-color: $blue;
+    .page-brand {
+        color: #fff;
+        background-color: darken($blue, 10%);
+    }
+    .navbar-toolbar {
+        & > li > a {
+            &, &:hover, &:focus {
+                color: #fff;
+            }
+        }
+        .navbar-search {
+            .form-control {
+                background-color: transparent;
+                &, &::placeholder {
+                    color: #fff;
+                }
+            }
+            .search-icon {
+                color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+
+.centered {
+    float:none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rel, .p-relative {position:relative !important}
+.p-absolute {position: absolute !important}
+
+.v-middle {vertical-align:middle;}
+
+.border-0 {border: 0 !important}
+
+.hidden {display:none}
+
+
+.flexbox {
+	display: flex !important;
+	justify-content: space-between!important;
+	align-items: center!important;
+}
+.flexbox-b {
+	display: flex !important;
+	align-items: center!important;
+}
+.flex-1 {flex: 1 !important}
